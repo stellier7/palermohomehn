@@ -19,7 +19,7 @@ export function HomeHero({ heroImage }: HomeHeroProps) {
   return (
     <ParallaxMedia
       src={heroImage}
-      alt="[PENDIENTE] Imagen hero de Palermo — fachada o vista icónica"
+      alt="Residencia de alto nivel — imagen hero de Palermo Home (reemplazar)"
       priority
       minHeightClass="hero-shell-min"
       imageClassName="hero-bg-image"
@@ -29,47 +29,52 @@ export function HomeHero({ heroImage }: HomeHeroProps) {
           <h1 className="type-display-hero max-w-4xl text-pretty text-hero-ink">
             {siteConfig.name}
           </h1>
-          <p className="type-meta mt-4 max-w-2xl text-pretty">
-            <span className="block font-medium sm:inline">{siteConfig.tagline}</span>
-            <span aria-hidden="true" className="hidden sm:inline">
-              {" "}
-              ·{" "}
-            </span>
-            <span className="mt-1 block sm:mt-0 sm:inline">
-              {siteConfig.heroSupporting}
-            </span>
+          <p className="type-meta mt-4 max-w-2xl text-pretty font-medium text-hero-ink/85">
+            {siteConfig.tagline}
+          </p>
+          <p className="type-meta mt-2 max-w-2xl text-pretty">
+            {siteConfig.heroSupporting}
+            <span aria-hidden="true"> · </span>
+            Tegucigalpa, Honduras
           </p>
         </RevealOnScroll>
         <RevealOnScroll delayMs={100}>
           <p className="prose-editorial mt-5 max-w-2xl sm:mt-6">{siteConfig.heroLead}</p>
         </RevealOnScroll>
 
-        <RevealOnScroll delayMs={180} className="hero-actions w-full max-w-none sm:max-w-[36rem]">
+        <RevealOnScroll delayMs={180} className="hero-actions w-full max-w-none sm:max-w-[40rem]">
           <div className="hero-catalog-actions">
             <Button
-              href="/properties"
+              href="/properties?listing=sale"
               variant="primary"
               className="hero-cta-btn w-full min-w-0 justify-center"
             >
-              Ver propiedades
+              En venta
             </Button>
             <Button
-              href={whatsappUrl}
+              href="/properties?listing=rent"
               variant="outline"
               className="hero-cta-btn w-full min-w-0 justify-center"
-              {...(waReady
-                ? { target: "_blank", rel: "noopener noreferrer" }
-                : {})}
             >
-              {waReady ? "WhatsApp" : "Contacto"}
+              En renta
             </Button>
           </div>
-          <Link
-            href="/about"
-            className="focus-ring hero-ink-link type-meta inline-flex min-h-11 max-w-full items-center py-2 text-pretty underline underline-offset-4 transition-colors"
-          >
-            Conocer Palermo
-          </Link>
+          <div className="mt-3 flex flex-wrap items-center gap-x-5 gap-y-2">
+            <Button
+              href={whatsappUrl}
+              variant="ghost"
+              className="hero-cta-btn"
+              {...(waReady ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+            >
+              WhatsApp {siteConfig.whatsapp.display}
+            </Button>
+            <Link
+              href="/about"
+              className="focus-ring hero-ink-link type-meta inline-flex min-h-11 items-center py-2 underline underline-offset-4"
+            >
+              Conocer Palermo Home
+            </Link>
+          </div>
         </RevealOnScroll>
       </Container>
     </ParallaxMedia>

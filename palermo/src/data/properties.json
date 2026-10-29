@@ -1,25 +1,25 @@
 {
   "agency": {
-    "name": "Palermo",
+    "name": "Palermo Home",
     "description": "Demo Palermo — bienes raíces. Contenido placeholder.",
-    "logo": "/images/site/logo-mark.svg",
+    "logo": "/images/site/logo-palermo-home.png",
     "address": {
       "street": "[PENDIENTE] Dirección",
       "city": "Tegucigalpa",
       "region": "Francisco Morazán",
       "country": "Honduras"
     },
-    "phone": "[PENDIENTE]",
-    "mobile": "[PENDIENTE]",
+    "phone": "+504 8819-5809",
+    "mobile": "+504 8819-5809",
     "email": "[PENDIENTE] correo@palermo.hn",
-    "whatsapp": "",
+    "whatsapp": "50488195809",
     "sourceWebsite": "",
     "scrapedAt": "2026-10-29"
   },
   "stats": {
     "total": 4,
-    "forSale": 4,
-    "forRent": 0
+    "forSale": 3,
+    "forRent": 1
   },
   "properties": [
     {
@@ -114,27 +114,27 @@
     },
     {
       "id": "p004",
-      "slug": "casa-venta-valle-demo",
+      "slug": "apartamento-alquiler-tegucigalpa-demo",
       "url": "",
-      "title": "[PENDIENTE] Casa / proyecto — nombre",
-      "description": "Cuarta ficha de demostración (casa o proyecto). Reemplazar con datos reales.\n\nUbicación: [PENDIENTE ciudad / zona].\nÁrea: [PENDIENTE].\nHabitaciones: [PENDIENTE] · Baños: [PENDIENTE].\n\nDesde / precio: consultar (no inventado).",
+      "title": "[PENDIENTE] Apartamento en renta — nombre",
+      "description": "Apartamento en renta — ficha de demostración. Reemplazar con ficha real.\n\nUbicación: [PENDIENTE], Tegucigalpa.\nÁrea: [PENDIENTE m²].\nHabitaciones: [PENDIENTE] · Baños: [PENDIENTE].\n\nRenta: consultar (no inventada).",
       "descriptionHtml": "",
-      "listingType": "sale",
-      "propertyType": "Casa",
-      "priceLabel": "Desde — consultar",
+      "listingType": "rent",
+      "propertyType": "Apartamento",
+      "priceLabel": "Consultar renta",
       "country": "Honduras",
       "region": "Francisco Morazán",
       "city": "Tegucigalpa",
       "condition": "Nuevo",
-      "bedrooms": "4",
-      "bathrooms": "3",
-      "garage": "2",
+      "bedrooms": "2",
+      "bathrooms": "2",
+      "garage": "1",
       "code": "P-004",
-      "coverImage": "https://images.unsplash.com/photo-1600047509807-ba8f99d36b3b?auto=format&fit=crop&w=1600&q=80",
+      "coverImage": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1600&q=80",
       "images": [
-        "https://images.unsplash.com/photo-1600047509807-ba8f99d36b3b?auto=format&fit=crop&w=1600&q=80",
-        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80",
-        "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=80"
+        "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1600&q=80"
       ],
       "attributes": {
         "Área": "[PENDIENTE]",

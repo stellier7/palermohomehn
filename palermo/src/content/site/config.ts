@@ -1,47 +1,45 @@
 /**
- * PALERMO — single editable CONFIG
+ * PALERMO HOME — single editable CONFIG
  * Swap name, colors (globals.css), copy, listings (properties.json),
  * images under /public/images, and contact fields here.
  *
- * Placeholders are marked clearly. Do not invent real prices or contacts.
+ * Placeholders are marked clearly. Do not invent real prices or listings.
  */
 
 export const siteConfig = {
-  name: "Palermo",
-  legalName: "Palermo", // [PENDIENTE] razón social si aplica
+  name: "Palermo Home",
+  legalName: "Palermo Home", // [PENDIENTE] razón social si aplica
   heroImage: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=2400&q=80",
-  tagline: "[PENDIENTE] Tagline de Palermo",
+  tagline: "Inmobiliaria con portafolio exclusivo de alto nivel en Honduras",
   /** One short supporting sentence under the brand (Spanish). */
-  heroSupporting: "Bienes raíces con criterio local en Honduras",
+  heroSupporting: "Renta y venta de propiedades",
   heroLead:
-    "Asesoría para comprar o vender propiedades con un proceso claro, discreto y profesional. Contenido de demostración — reemplazar con la propuesta real del cliente.",
+    "Portafolio selecto para quienes buscan residencias y activos de alto nivel, con asesoría clara y discreta en Honduras.",
   description:
-    "Palermo — demo de sitio inmobiliario premium. Contenido placeholder hasta confirmar datos del dueño.",
+    "Palermo Home — inmobiliaria con portafolio exclusivo de alto nivel en Honduras. Renta y venta de propiedades.",
   url:
     process.env.NEXT_PUBLIC_SITE_URL ??
     (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000"),
-  defaultOgImage: "/images/site/logo-mark.svg",
-  logo: "/images/site/logo-mark.svg",
-  logoFull: "/images/site/logo-mark.svg",
+  defaultOgImage: "/images/site/logo-palermo-home.png",
+  logo: "/images/site/logo-palermo-home.png",
+  logoFull: "/images/site/logo-palermo-home.png",
 
-  /** Contact — placeholders only until the owner supplies Palermo channels. */
-  contactEmail: "[PENDIENTE] correo@palermo.hn",
-  phone: "[PENDIENTE] +504 XXXX-XXXX",
-  mobile: "[PENDIENTE] +504 XXXX-XXXX",
+  contactEmail: "[PENDIENTE] correo@palermohome.hn",
+  phone: "+504 8819-5809",
+  mobile: "+504 8819-5809",
   whatsapp: {
-    display: "[PENDIENTE] WhatsApp",
-    /** Digits only. Leave empty until real number — CTAs stay visible but labeled. */
-    e164: "",
+    display: "+504 8819-5809",
+    e164: "50488195809",
     defaultMessage:
-      "Hola, vi el sitio de Palermo y me gustaría recibir información sobre sus propiedades.",
-    ready: false,
+      "Hola, vi el sitio de Palermo Home y me gustaría recibir información sobre sus propiedades.",
+    ready: true,
   },
   offices: [
     {
       city: "Tegucigalpa",
       address: "[PENDIENTE] Dirección de oficina",
-      phone: "[PENDIENTE] +504 XXXX-XXXX",
-      mapEmbedUrl: "", // optional Google Maps embed URL
+      phone: "+504 8819-5809",
+      mapEmbedUrl: "",
       mapLink: "https://maps.google.com/?q=Tegucigalpa,+Honduras",
     },
   ],
@@ -53,27 +51,25 @@ export const siteConfig = {
     { label: "Contacto", href: "/contact" },
   ],
 
-  /** Homepage featured order — must match slugs in properties.json (+ id suffix). */
   homeFeaturedPropertySlugs: [
     "casa-venta-tegucigalpa-demo-p001",
     "apartamento-venta-tegucigalpa-demo-p002",
     "terreno-venta-tegucigalpa-demo-p003",
-    "casa-venta-valle-demo-p004",
-  ], // slug = `${json.slug}-${json.id}` from map-altair
+    "apartamento-alquiler-tegucigalpa-demo-p004",
+  ],
 
-  /** Assumed scope until owner confirms — brokerage / sales, not short-term rentals. */
   services: [
     {
-      title: "Compraventa residencial",
-      body: "[PENDIENTE] Casas y apartamentos — ajustar al alcance real de Palermo.",
+      title: "Venta de propiedades",
+      body: "Residencias y activos de alto nivel en Honduras — portafolio exclusivo para compradores e inversionistas.",
     },
     {
-      title: "Terrenos y lotes",
-      body: "[PENDIENTE] Descripción del servicio de terrenos.",
+      title: "Renta de propiedades",
+      body: "Alquileres residenciales de largo plazo. Distinto de AirHome HN (estadías cortas amuebladas).",
     },
     {
-      title: "Proyectos y desarrollos",
-      body: "[PENDIENTE] Si Palermo comercializa proyectos, detallar aquí.",
+      title: "Portafolio exclusivo",
+      body: "[PENDIENTE] Cómo seleccionan y presentan las propiedades de alto nivel.",
     },
     {
       title: "Asesoría y corretaje",
@@ -83,17 +79,17 @@ export const siteConfig = {
 
   about: {
     eyebrow: "Nosotros",
-    headline: "Confianza para decisiones importantes",
+    headline: "Portafolio exclusivo de alto nivel",
     paragraphs: [
-      "[PENDIENTE] Breve historia de Palermo: qué hacen, para quién y por qué confiar.",
-      "Este bloque es un marcador de posición para el pitch. No inventamos años de experiencia ni logros.",
+      "Palermo Home es una inmobiliaria enfocada en renta y venta de propiedades de alto nivel en Honduras.",
+      "[PENDIENTE] Breve historia del equipo, años de experiencia y por qué confiar — a completar con el dueño.",
     ],
-    englishHeadline: "About Palermo",
+    englishHeadline: "About Palermo Home",
     englishBody:
-      "[PENDING] Short English bio for international buyers. Palermo is a real-estate sales brand — separate from AirHome HN short-term rentals.",
+      "Palermo Home is a Honduras real-estate firm focused on high-level rental and sales. Separate from AirHome HN short-term furnished stays. [PENDING] Team bio.",
     trustPoints: [
-      { label: "Enfoque", value: "Compraventa / corretaje" },
-      { label: "Cobertura", value: "[PENDIENTE] Zonas" },
+      { label: "Enfoque", value: "Renta y venta" },
+      { label: "Posición", value: "Portafolio de alto nivel" },
       { label: "Idiomas", value: "Español · English" },
     ],
   },
@@ -107,7 +103,7 @@ export const siteConfig = {
     {
       quote: "[PENDIENTE] Segundo testimonio o caso cerrado.",
       author: "[Nombre]",
-      role: "Inversionista",
+      role: "Inquilino / inversionista",
     },
   ],
 
@@ -130,13 +126,12 @@ export const siteConfig = {
     },
   ],
 
-  /** Sister brand — same team, different product. Keep visually secondary. */
   sisterBrand: {
     enabled: true,
     eyebrow: "También del mismo equipo",
     name: "AirHome HN",
     blurb:
-      "Alojamientos amueblados de corta y mediana estadía. Marca aparte de Palermo (ventas / corretaje).",
+      "Alojamientos amueblados de corta y mediana estadía. Marca aparte de Palermo Home (renta y venta de largo plazo).",
     url: "https://airhomehn.com/",
     cta: "Visitar AirHome HN",
   },

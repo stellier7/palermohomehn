@@ -31,19 +31,19 @@ export function SiteHeader() {
           className="focus-ring group flex shrink-0 items-center gap-2.5 sm:gap-3"
           aria-label={siteConfig.name}
         >
-          <span className="relative flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-full border border-accent/25 bg-surface shadow-[var(--shadow-soft)] transition-[border-color,box-shadow] duration-200 group-hover:border-accent/45 group-hover:shadow-[var(--shadow-card)] sm:h-11 sm:w-11">
+          <span className="relative h-11 w-11 shrink-0 overflow-hidden rounded-full shadow-[var(--shadow-soft)] ring-1 ring-[color-mix(in_srgb,var(--brand-gold)_45%,transparent)] transition-[box-shadow,ring-color] duration-200 group-hover:shadow-[var(--shadow-card)] sm:h-12 sm:w-12">
             <Image
               src={siteConfig.logo}
               alt=""
               width={176}
               height={176}
-              className="h-[92%] w-[92%] object-contain"
+              className="h-full w-full object-cover"
               priority
-              sizes="44px"
+              sizes="48px"
             />
           </span>
-          <span className="font-display text-[1.35rem] leading-none tracking-tight text-accent sm:text-[1.5rem]">
-            {siteConfig.name}
+          <span className="font-display text-[1.25rem] leading-none tracking-tight text-accent sm:text-[1.4rem]">
+            Palermo <span className="text-[color:var(--brand-gold)]">Home</span>
           </span>
         </Link>
 

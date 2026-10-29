@@ -2,20 +2,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600&display=swap");
 
 :root {
-  /* Palermo brand — forest / slate (premium, distinct from AirHome red
-     and Altair purple). Edit these tokens to re-skin. */
-  --background: #e8ece9;
-  --foreground: #1a221e;
-  --muted: #5a675f;
-  --accent: #1f4d3d;
-  --accent-hover: #16382d;
-  --accent-soft: rgba(31, 77, 61, 0.14);
-  /* Hero copy on bright photography — near-black for mobile readability. */
-  --hero-ink: #121816;
+  /* Palermo Home — navy + brass gold from the circular logo. */
+  --background: #eceef2;
+  --foreground: #151d2c;
+  --muted: #5c6473;
+  --accent: #1a2740;
+  --accent-hover: #0f1724;
+  --accent-soft: rgba(26, 39, 64, 0.12);
+  --brand-gold: #c4a05a;
+  --brand-gold-soft: rgba(196, 160, 90, 0.18);
+  /* Hero copy on bright photography — near-navy ink for readability. */
+  --hero-ink: #121820;
   --whatsapp: var(--accent);
   --whatsapp-hover: var(--accent-hover);
-  --line: rgba(26, 34, 30, 0.12);
-  --surface: #f2f5f3;
+  --line: rgba(21, 29, 44, 0.12);
+  --surface: #f4f5f8;
   --max-width: 88rem;
   --section-y: clamp(4rem, 8vw, 7rem);
   --motion-duration: 0.7s;
@@ -48,6 +49,7 @@
   --color-hero-ink: var(--hero-ink);
   --color-line: var(--line);
   --color-surface: var(--surface);
+  --color-brand-gold: var(--brand-gold);
   --font-sans: "DM Sans", system-ui, sans-serif;
   --font-display: "Cormorant Garamond", Georgia, serif;
   --font-dm-sans: "DM Sans", system-ui, sans-serif;
@@ -62,8 +64,8 @@
 
 body {
   background:
-    radial-gradient(120% 70% at 100% -10%, rgba(95, 130, 112, 0.18), transparent 55%),
-    radial-gradient(90% 55% at -5% 105%, rgba(31, 77, 61, 0.1), transparent 50%),
+    radial-gradient(120% 70% at 100% -10%, rgba(196, 160, 90, 0.14), transparent 55%),
+    radial-gradient(90% 55% at -5% 105%, rgba(26, 39, 64, 0.1), transparent 50%),
     var(--background);
   color: var(--foreground);
   font-family: var(--font-dm-sans), system-ui, sans-serif;
@@ -124,7 +126,11 @@ body::before {
   line-height: 1.45;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--brand-gold);
+}
+
+.type-meta-caps.text-accent {
+  color: var(--brand-gold);
 }
 
 .type-caption {

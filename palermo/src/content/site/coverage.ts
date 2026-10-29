@@ -27,16 +27,16 @@ export const homeServiceLinks = [
     href: "/properties?listing=sale",
   },
   {
+    label: "Propiedades en renta",
+    href: "/properties?listing=rent",
+  },
+  {
     label: "Casas",
     href: "/properties?type=house",
   },
   {
     label: "Apartamentos",
     href: "/properties?type=apartment",
-  },
-  {
-    label: "Terrenos",
-    href: "/properties?type=land",
   },
   {
     label: "Ver servicios",

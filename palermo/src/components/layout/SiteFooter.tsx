@@ -3,7 +3,8 @@ import { siteConfig } from "@/content/site/config";
 import { buildWhatsAppUrl } from "@/lib/contact/whatsapp";
 import { Container } from "./Container";
 
-const phoneHref = (display: string) => `tel:${display.replace(/\s/g, "")}`;
+const phoneHref = (display: string) =>
+  `tel:+${display.replace(/\D/g, "").replace(/^0+/, "")}`;
 
 export function SiteFooter() {
   const year = new Date().getFullYear();

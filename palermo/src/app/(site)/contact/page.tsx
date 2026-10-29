@@ -21,8 +21,8 @@ export default function ContactPage() {
         <div>
           <h1 className="font-display text-5xl sm:text-6xl">Contacto</h1>
           <p className="prose-editorial mt-6 max-w-xl">
-            Canales de Palermo (no AirHome). Los datos reales se cargan cuando el dueño los
-            confirme — aquí solo hay marcadores.
+            WhatsApp y teléfono de Palermo Home. Email y dirección de oficina pendientes de
+            confirmar.
           </p>
           <div className="mt-10 space-y-6 text-sm text-muted">
             <p>
