@@ -52,7 +52,7 @@ export const siteConfig = {
   ],
 
   homeFeaturedPropertySlugs: [
-    "casa-venta-tegucigalpa-demo-p001",
+    "apartamento-venta-torre-cipreses-san-ignacio-p001",
     "apartamento-venta-tegucigalpa-demo-p002",
     "terreno-venta-tegucigalpa-demo-p003",
     "apartamento-alquiler-tegucigalpa-demo-p004",

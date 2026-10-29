@@ -24,31 +24,37 @@
   "properties": [
     {
       "id": "p001",
-      "slug": "casa-venta-tegucigalpa-demo",
+      "slug": "apartamento-venta-torre-cipreses-san-ignacio",
       "url": "",
-      "title": "[PENDIENTE] Casa residencial — nombre de la propiedad",
-      "description": "Propiedad de demostración. Reemplazar con ficha real.\n\nUbicación: [PENDIENTE zona], Tegucigalpa.\nÁrea: [PENDIENTE m² / varas].\nHabitaciones: [PENDIENTE] · Baños: [PENDIENTE].\n\nCaracterísticas: [PENDIENTE 1], [PENDIENTE 2], [PENDIENTE 3].\n\nPrecio: consultar (no inventado).",
+      "title": "Apartamento en Torre Cipreses — San Ignacio",
+      "description": "Apartamento de un dormitorio en Torre Cipreses, San Ignacio, Tegucigalpa.\n\nEspacio contemporáneo, luminoso y listo para habitar: sala-comedor integrada con acceso a balcón privado y vista hacia el entorno urbano y las montañas de la capital. Acabados modernos en tonos neutros, piso de porcelanato y ambientación de alto nivel.\n\nLa cocina es lineal y funcional, con gabinetes en madera clara, cubierta blanca y electrodomésticos en acero inoxidable (estufa, campana y microondas). El baño completo cuenta con ducha encristalada y acabados contemporáneos. La habitación principal ofrece closet-ready staging, aire acondicionado tipo split y persianas tipo zebra.\n\nIdeal como residencia ejecutiva o inversión en una de las zonas más cotizadas de Tegucigalpa.\n\nCaracterísticas destacadas:\n• 1 habitación · 1 baño\n• Sala-comedor abierta con balcón\n• Cocina equipada\n• Aire acondicionado\n• Torre con ubicación privilegiada en San Ignacio\n\nÁrea en m² / parqueo: confirmar con Palermo Home.\nPrecio: US$160,000",
       "descriptionHtml": "",
       "listingType": "sale",
-      "propertyType": "Casa",
-      "priceLabel": "Consultar precio",
+      "propertyType": "Apartamento",
+      "priceLabel": "US$160,000",
       "country": "Honduras",
       "region": "Francisco Morazán",
       "city": "Tegucigalpa",
       "condition": "Usado",
-      "bedrooms": "3",
-      "bathrooms": "2",
-      "garage": "2",
-      "code": "P-001",
-      "coverImage": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1600&q=80",
+      "bedrooms": "1",
+      "bathrooms": "1",
+      "garage": null,
+      "code": "PH-CIP-001",
+      "coverImage": "/images/properties/torre-cipreses/01.jpg",
       "images": [
-        "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1600&q=80",
-        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
-        "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1600&q=80"
+        "/images/properties/torre-cipreses/01.jpg",
+        "/images/properties/torre-cipreses/02.jpg",
+        "/images/properties/torre-cipreses/03.jpg",
+        "/images/properties/torre-cipreses/04.jpg",
+        "/images/properties/torre-cipreses/05.jpg",
+        "/images/properties/torre-cipreses/06.jpg",
+        "/images/properties/torre-cipreses/07.jpg"
       ],
       "attributes": {
-        "Área": "[PENDIENTE]",
-        "Nota": "Ficha placeholder para pitch"
+        "Torre": "Cipreses",
+        "Zona": "San Ignacio",
+        "Área": "[PENDIENTE m²]",
+        "Parqueo": "[PENDIENTE]"
       },
       "schema": {}
     },
