@@ -1,0 +1,71 @@
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
+import { siteConfig } from "@/content/site/config";
+import { useScrollLinkedHeader } from "@/lib/layout/useScrollLinkedHeader";
+import { Container } from "./Container";
+import { MobileNav } from "./MobileNav";
+
+export function SiteHeader() {
+  const { headerRef, translateY, isFullyHidden } = useScrollLinkedHeader();
+
+  return (
+    <header
+      ref={headerRef}
+      style={{ transform: `translate3d(0, ${translateY}px, 0)` }}
+      className={`sticky top-0 z-50 border-b border-line/80 bg-background/88 shadow-[var(--shadow-header)] backdrop-blur-lg will-change-transform motion-reduce:transform-none ${
+        isFullyHidden ? "pointer-events-none" : ""
+      }`}
+      {...(isFullyHidden ? { inert: true } : {})}
+    >
+      <a
+        href="#contenido-principal"
+        className="focus-ring sr-only left-4 top-4 z-[60] rounded-md bg-background px-4 py-2 text-sm font-medium text-foreground focus:not-sr-only focus:absolute"
+      >
+        Saltar al contenido
+      </a>
+      <Container className="flex h-[var(--site-header-height)] items-center gap-2.5 sm:gap-3 md:h-[var(--site-header-height-md)]">
+        <Link
+          href="/"
+          className="focus-ring group flex shrink-0 items-center gap-2.5 sm:gap-3"
+          aria-label={siteConfig.name}
+        >
+          <span className="relative h-11 w-11 shrink-0 overflow-hidden rounded-full bg-[color:var(--accent)] shadow-[var(--shadow-soft)] ring-1 ring-[color-mix(in_srgb,var(--brand-gold)_50%,transparent)] transition-[box-shadow,ring-color] duration-200 group-hover:shadow-[var(--shadow-card)] sm:h-12 sm:w-12">
+            <Image
+              src={siteConfig.logo}
+              alt=""
+              width={320}
+              height={320}
+              className="h-full w-full scale-[1.02] object-cover"
+              priority
+              sizes="48px"
+              unoptimized
+            />
+          </span>
+          <span className="font-display text-[1.25rem] leading-none tracking-tight text-accent sm:text-[1.4rem]">
+            Palermo <span className="text-[color:var(--brand-gold)]">Home</span>
+          </span>
+        </Link>
+
+        <div className="ml-auto flex items-center gap-2 sm:gap-3">
+          <nav
+            className="hidden items-center gap-1 text-sm lg:flex xl:gap-2"
+            aria-label="Principal"
+          >
+            {siteConfig.nav.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="focus-ring type-meta-caps inline-flex min-h-10 items-center rounded-full px-2.5 text-accent/80 transition-colors hover:bg-accent-soft hover:text-accent xl:px-3"
+              >
+                {item.label}
+              </Link>
+            ))}
+          </nav>
+          <MobileNav />
+        </div>
+      </Container>
+    </header>
+  );
+}

@@ -1,0 +1,164 @@
+import type { Property, PropertyType } from "./types";
+
+const RESIDENTIAL_TYPES: PropertyType[] = [
+  "residential",
+  "apartment",
+  "villa",
+  "house",
+  "condominium",
+];
+
+const COMMERCIAL_TYPES: PropertyType[] = [
+  "commercial",
+  "office",
+  "retail",
+  "hotel",
+  "industrial",
+];
+
+const TYPE_LABELS: Record<PropertyType, string> = {
+  residential: "Residencial",
+  apartment: "Apartamento",
+  villa: "Villa",
+  house: "Casa",
+  condominium: "Condominio",
+  commercial: "Comercial",
+  office: "Oficina",
+  retail: "Local comercial",
+  hotel: "Hotel",
+  development: "Desarrollo",
+  land: "Terreno",
+  lot: "Lote",
+  industrial: "Industrial",
+  investment: "Inversión",
+};
+
+const STATUS_LABELS: Record<Property["status"], string> = {
+  available: "Disponible",
+  sold: "Vendido",
+  reserved: "Reservado",
+  under_development: "En desarrollo",
+  coming_soon: "Próximamente",
+  off_market: "Fuera de mercado",
+};
+
+export function supportsResidentialSpecs(type: PropertyType): boolean {
+  return RESIDENTIAL_TYPES.includes(type);
+}
+
+export function supportsCommercialSpecs(type: PropertyType): boolean {
+  return COMMERCIAL_TYPES.includes(type);
+}
+
+export function supportsLandSpecs(type: PropertyType): boolean {
+  return type === "land" || type === "lot" || type === "development";
+}
+
+export function supportsInvestmentBlock(property: Property): boolean {
+  return (
+    property.investment !== undefined ||
+    property.propertyType === "investment" ||
+    property.tags?.includes("investment") === true
+  );
+}
+
+export function formatPropertyType(type: PropertyType): string {
+  return TYPE_LABELS[type] ?? type;
+}
+
+export function formatStatus(status: Property["status"]): string {
+  return STATUS_LABELS[status] ?? status;
+}
+
+export type ListingMode = "sale" | "rent" | "both";
+
+export function formatListingTag(tag: string): string {
+  if (tag === "venta") return "Venta";
+  if (tag === "alquiler") return "Alquiler";
+  return tag;
+}
+
+export function getListingMode(tags: string[] | undefined): ListingMode {
+  const hasSale = tags?.includes("venta") === true;
+  const hasRent = tags?.includes("alquiler") === true;
+  if (hasSale && hasRent) return "both";
+  if (hasRent) return "rent";
+  return "sale";
+}
+
+export function listingTagsFromMode(mode: ListingMode): string[] {
+  switch (mode) {
+    case "sale":
+      return ["venta"];
+    case "rent":
+      return ["alquiler"];
+    case "both":
+      return ["venta", "alquiler"];
+    default: {
+      const _exhaustive: never = mode;
+      return _exhaustive;
+    }
+  }
+}
+
+export function formatPropertyListing(tags: string[] | undefined): string {
+  const mode = getListingMode(tags);
+  switch (mode) {
+    case "sale":
+      return "Venta";
+    case "rent":
+      return "Alquiler";
+    case "both":
+      return "Venta y alquiler";
+    default: {
+      const _exhaustive: never = mode;
+      return _exhaustive;
+    }
+  }
+}
+
+export function parseListingMode(value: string | null | undefined): ListingMode {
+  if (value === "rent" || value === "both") return value;
+  return "sale";
+}
+
+const FILTER_PROPERTY_TYPES: PropertyType[] = [
+  "house",
+  "apartment",
+  "villa",
+  "land",
+  "commercial",
+  "office",
+  "retail",
+  "industrial",
+  "condominium",
+];
+
+export function parsePropertyFilterType(value: string | undefined): PropertyType | undefined {
+  if (!value) {
+    return undefined;
+  }
+  return FILTER_PROPERTY_TYPES.includes(value as PropertyType)
+    ? (value as PropertyType)
+    : undefined;
+}
+
+export function getDisplayPrice(property: Property): string | null {
+  if (property.pricing?.display) {
+    return property.pricing.display;
+  }
+  if (property.pricing?.priceOnRequest) {
+    return "Consultar precio";
+  }
+  if (
+    property.pricing?.amount !== undefined &&
+    property.pricing.currency
+  ) {
+    return new Intl.NumberFormat("es-HN", {
+      style: "currency",
+      currency: property.pricing.currency,
+      maximumFractionDigits: 0,
+    }).format(property.pricing.amount);
+  }
+  return null;
+}

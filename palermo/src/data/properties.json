@@ -1,0 +1,211 @@
+{
+  "agency": {
+    "name": "Palermo Home",
+    "description": "Demo Palermo — bienes raíces. Contenido placeholder.",
+    "logo": "/images/site/logo-palermo-home.png",
+    "address": {
+      "street": "Tegucigalpa · atención por cita",
+      "city": "Tegucigalpa",
+      "region": "Francisco Morazán",
+      "country": "Honduras"
+    },
+    "phone": "+504 8819-5809",
+    "mobile": "+504 8819-5809",
+    "email": "",
+    "whatsapp": "50488195809",
+    "sourceWebsite": "",
+    "scrapedAt": "2026-10-29"
+  },
+  "stats": {
+    "total": 5,
+    "forSale": 3,
+    "forRent": 2
+  },
+  "properties": [
+    {
+      "id": "p001",
+      "slug": "apartamento-venta-torre-cipreses-san-ignacio",
+      "url": "",
+      "title": "Apartamento en Torre Cipreses — San Ignacio",
+      "description": "Apartamento amueblado de un dormitorio en Torre Cipreses, San Ignacio, Tegucigalpa.\n\nEspacio contemporáneo, luminoso y listo para habitar: sala-comedor integrada con acceso a balcón privado y vista hacia el entorno urbano y las montañas de la capital. Acabados modernos en tonos neutros, piso de porcelanato y ambientación de alto nivel.\n\nLa cocina es lineal y funcional, con gabinetes en madera clara, cubierta blanca y electrodomésticos en acero inoxidable (estufa, campana y microondas). El baño completo cuenta con ducha encristalada y acabados contemporáneos. La habitación principal incluye aire acondicionado tipo split y persianas tipo zebra.\n\nSe entrega amueblado, con parqueo incluido. Amenidades del apartamento: balcón, A/C, cocina equipada, TV y acabados modernos. Amenidades de la torre: confirmar con Palermo Home (lobby, seguridad, áreas comunes).\n\nIdeal como residencia ejecutiva o inversión en una de las zonas más cotizadas de Tegucigalpa.\n\nCaracterísticas destacadas:\n• 1 habitación · 1 baño\n• Amueblado\n• Parqueo incluido\n• Sala-comedor abierta con balcón\n• Cocina equipada · Aire acondicionado\n• Torre Cipreses — San Ignacio\n\nÁrea en m²: confirmar con Palermo Home.\nPrecio: US$160,000",
+      "descriptionHtml": "",
+      "listingType": "sale",
+      "propertyType": "Apartamento",
+      "priceLabel": "US$160,000",
+      "country": "Honduras",
+      "region": "Francisco Morazán",
+      "city": "Tegucigalpa",
+      "condition": "Usado",
+      "bedrooms": "1",
+      "bathrooms": "1",
+      "garage": "1",
+      "code": "PH-CIP-001",
+      "coverImage": "/images/properties/torre-cipreses/01.jpg",
+      "images": [
+        "/images/properties/torre-cipreses/01.jpg",
+        "/images/properties/torre-cipreses/02.jpg",
+        "/images/properties/torre-cipreses/03.jpg",
+        "/images/properties/torre-cipreses/04.jpg",
+        "/images/properties/torre-cipreses/05.jpg",
+        "/images/properties/torre-cipreses/06.jpg",
+        "/images/properties/torre-cipreses/07.jpg"
+      ],
+      "attributes": {
+        "Torre": "Cipreses",
+        "Zona": "San Ignacio",
+        "Área": "[PENDIENTE m²]",
+        "Parqueo": "Incluido",
+        "Amueblado": "Sí"
+      },
+      "schema": {}
+    },
+    {
+      "id": "p002",
+      "slug": "bodega-venta-siguatepeque-ca5",
+      "url": "",
+      "title": "Bodega en Siguatepeque — Centro logístico CA-5",
+      "description": "Bodega / centro logístico en Siguatepeque, con conectividad inmediata a la CA-5.\n\nEspacio industrial ideal para almacenamiento, distribución u operación logística en el corredor central de Honduras. Instalaciones modernas tipo centro logístico, con andenes de carga y acceso para transporte pesado.\n\nOpciones disponibles:\n• Renta desde US$4 por m²\n• Oferta especial en liquidación: L. 5,500,000\n\nUbicación estratégica en Siguatepeque para empresas que necesitan salida rápida hacia Tegucigalpa, el norte y el corredor CA-5.\n\nCaracterísticas destacadas:\n• Bodega / uso industrial-logístico\n• Conectividad inmediata con la CA-5\n• Andenes de carga\n• Centro logístico en Siguatepeque\n\nÁrea exacta en m² y unidad disponible: confirmar con Palermo Home.\nPrecio liquidación: L. 5,500,000 · Renta desde US$4/m²",
+      "descriptionHtml": "",
+      "listingType": "sale",
+      "propertyType": "Bodega",
+      "priceLabel": "L. 5,500,000",
+      "country": "Honduras",
+      "region": "Comayagua",
+      "city": "Siguatepeque",
+      "condition": "Usado",
+      "bedrooms": null,
+      "bathrooms": null,
+      "garage": null,
+      "code": "PH-SIG-B01",
+      "coverImage": "/images/properties/bodega-siguatepeque/02-centro-logistico.jpg",
+      "images": [
+        "/images/properties/bodega-siguatepeque/02-centro-logistico.jpg",
+        "/images/properties/bodega-siguatepeque/01-flyer.jpg"
+      ],
+      "attributes": {
+        "Tipo": "Bodega / centro logístico",
+        "Acceso": "CA-5 inmediata",
+        "Renta": "Desde US$4/m²",
+        "Liquidación": "L. 5,500,000"
+      },
+      "schema": {}
+    },
+    {
+      "id": "p003",
+      "slug": "casa-venta-hacienda-real-cortes",
+      "url": "",
+      "title": "Casa en Residencial Hacienda Real — Cortés",
+      "description": "Casa contemporánea en Residencial Hacienda Real, departamento de Cortés.\n\nVivienda de un nivel, de líneas modernas y fachada blanca, ubicada dentro de un residencial con acceso controlado y caseta de seguridad. Distribución ideal para familia: dos habitaciones principales más cuarto de empleada.\n\nLa cocina integral destaca por gabinetes en madera clara, top de granito, isla central, campana en acero y grifería negra mate. Hay baño con acabados contemporáneos (lavamanos tipo vessel y ducha encristalada), terraza/patio posterior con área techada y aire acondicionado tipo split. Al frente: portón peatonal y garage doble.\n\nCaracterísticas destacadas:\n• 2 habitaciones + cuarto de empleada\n• Residencial Hacienda Real (acceso controlado)\n• Garage doble\n• Cocina integral con isla y granito\n• Terraza / patio\n• Aire acondicionado\n• Cortés, Honduras\n\nBaños exactos, área en m² y precio: confirmar con Palermo Home.\nPrecio: consultar",
+      "descriptionHtml": "",
+      "listingType": "sale",
+      "propertyType": "Casa",
+      "priceLabel": "Consultar precio",
+      "country": "Honduras",
+      "region": "Cortés",
+      "city": "Cortés",
+      "condition": "Usado",
+      "bedrooms": "2",
+      "bathrooms": null,
+      "garage": "2",
+      "code": "PH-HR-001",
+      "coverImage": "/images/properties/hacienda-real/02.jpg",
+      "images": [
+        "/images/properties/hacienda-real/02.jpg",
+        "/images/properties/hacienda-real/01.jpg",
+        "/images/properties/hacienda-real/03.jpg",
+        "/images/properties/hacienda-real/05.jpg",
+        "/images/properties/hacienda-real/04.jpg"
+      ],
+      "attributes": {
+        "Residencial": "Hacienda Real",
+        "Departamento": "Cortés",
+        "Habitaciones": "2 + cuarto de empleada",
+        "Parqueo": "Garage doble",
+        "Área": "[PENDIENTE m²]",
+        "Precio": "Consultar"
+      },
+      "schema": {}
+    },
+    {
+      "id": "p004",
+      "slug": "apartamento-alquiler-torre-nivo-las-lomas",
+      "url": "",
+      "title": "Apartamento en Torre Nivo — Las Lomas",
+      "description": "Apartamento amueblado en Torre Nivo, Las Lomas, Tegucigalpa — en alquiler.\n\nResidencia de alto nivel en el nivel 6, con 97 m², espacios amplios, luz natural y vistas panorámicas a la ciudad y las montañas. Diseño contemporáneo con acabados premium, ideal para quienes buscan confort, elegancia y una ubicación privilegiada.\n\nDistribución: 2 habitaciones + estudio, 2½ baños y 2 parqueos. Incluye cocina moderna y equipada con isla, sala-comedor luminosa, dormitorio principal con walk-in/closets, dormitorio secundario, estudio versátil y baños elegantes.\n\nCaracterísticas destacadas:\n• En alquiler — US$2,000 / mes\n• 97 m² · Nivel 6\n• 2 habitaciones + estudio\n• 2½ baños\n• 2 parqueos\n• Amueblado · cocina equipada\n• Torre Nivo — Las Lomas, Tegucigalpa\n• Vistas a la ciudad y montañas\n\nConsultas por WhatsApp: +504 8819-5809 · Instagram @palermohomehn",
+      "descriptionHtml": "",
+      "listingType": "rent",
+      "propertyType": "Apartamento",
+      "priceLabel": "US$2,000 / mes",
+      "country": "Honduras",
+      "region": "Francisco Morazán",
+      "city": "Tegucigalpa",
+      "condition": "Usado",
+      "bedrooms": "2",
+      "bathrooms": "2.5",
+      "garage": "2",
+      "code": "PH-NIVO-001",
+      "coverImage": "/images/properties/torre-nivo/01.jpg",
+      "images": [
+        "/images/properties/torre-nivo/01.jpg",
+        "/images/properties/torre-nivo/02.jpg",
+        "/images/properties/torre-nivo/03.jpg",
+        "/images/properties/torre-nivo/04.jpg",
+        "/images/properties/torre-nivo/05.jpg",
+        "/images/properties/torre-nivo/06.jpg",
+        "/images/properties/torre-nivo/07.jpg",
+        "/images/properties/torre-nivo/08.jpg",
+        "/images/properties/torre-nivo/09.jpg"
+      ],
+      "attributes": {
+        "Torre": "Nivo",
+        "Zona": "Las Lomas",
+        "Nivel": "6",
+        "Área": "97 m²",
+        "Habitaciones": "2 + estudio",
+        "Baños": "2½",
+        "Parqueos": "2",
+        "Operación": "Alquiler"
+      },
+      "schema": {}
+    },
+    {
+      "id": "p005",
+      "slug": "consultorio-alquiler-clinica-amueblada",
+      "url": "",
+      "title": "Clínica / consultorio amueblado — 26 m²",
+      "description": "Clínica / consultorio amueblado de 26 m² — ideal para profesionales de la salud.\n\nEspacio funcional y listo para operar, pensado para odontólogos, médicos, psicólogos, nutricionistas, fisioterapeutas y afines. Ubicación estratégica en Tegucigalpa, en un entorno profesional de alta demanda.\n\nDos modalidades de renta:\n• Opción 1 — Consultorio amueblado (sin equipo dental): US$20 / m²\n  Incluye escritorios ejecutivos, sillas de atención y recepción, impresora, aire acondicionado, muebles de almacenamiento y ambientación. Listo para operar de inmediato.\n• Opción 2 — Consultorio odontológico totalmente equipado: US$25 / m²\n  Incluye silla dental ADEC, equipo de rayos X con RVG, autoclave, cavitron, televisión y set complementario. Llave en mano.\n\nMantenimiento: US$3.05 / m² (consumo de energía eléctrica no incluido).\n\nCaracterísticas destacadas:\n• 26 m²\n• Amueblado\n• Dos opciones de equipamiento\n• Recepción / áreas comunes del edificio\n• Aire acondicionado\n• Vista urbana\n\nPara ficha técnica o visita privada: WhatsApp +504 8819-5809.",
+      "descriptionHtml": "",
+      "listingType": "rent",
+      "propertyType": "Oficina",
+      "priceLabel": "Desde US$20 / m²",
+      "country": "Honduras",
+      "region": "Francisco Morazán",
+      "city": "Tegucigalpa",
+      "condition": "Usado",
+      "bedrooms": null,
+      "bathrooms": null,
+      "garage": null,
+      "code": "PH-CLI-001",
+      "coverImage": "/images/properties/consultorio-clinica/04.jpg",
+      "images": [
+        "/images/properties/consultorio-clinica/04.jpg",
+        "/images/properties/consultorio-clinica/07.jpg",
+        "/images/properties/consultorio-clinica/02.jpg",
+        "/images/properties/consultorio-clinica/03.jpg",
+        "/images/properties/consultorio-clinica/05.jpg",
+        "/images/properties/consultorio-clinica/08.jpg",
+        "/images/properties/consultorio-clinica/06.jpg",
+        "/images/properties/consultorio-clinica/09.jpg"
+      ],
+      "attributes": {
+        "Tipo": "Clínica / consultorio",
+        "Área": "26 m²",
+        "Canon base": "US$20 / m² (sin equipo dental)",
+        "Canon odontológico": "US$25 / m² (equipado)",
+        "Mantenimiento": "US$3.05 / m² (sin energía)",
+        "Zona": "Tegucigalpa"
+      },
+      "schema": {}
+    }
+  ]
+}
