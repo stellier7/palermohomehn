@@ -31,13 +31,13 @@ export function SiteHeader() {
           className="focus-ring group flex shrink-0 items-center gap-2.5 sm:gap-3"
           aria-label={siteConfig.name}
         >
-          <span className="relative h-11 w-11 shrink-0 overflow-hidden rounded-full shadow-[var(--shadow-soft)] ring-1 ring-[color-mix(in_srgb,var(--brand-gold)_45%,transparent)] transition-[box-shadow,ring-color] duration-200 group-hover:shadow-[var(--shadow-card)] sm:h-12 sm:w-12">
+          <span className="relative h-11 w-11 shrink-0 overflow-hidden rounded-full bg-[color:var(--accent)] shadow-[var(--shadow-soft)] ring-1 ring-[color-mix(in_srgb,var(--brand-gold)_50%,transparent)] transition-[box-shadow,ring-color] duration-200 group-hover:shadow-[var(--shadow-card)] sm:h-12 sm:w-12">
             <Image
               src={siteConfig.logo}
               alt=""
-              width={176}
-              height={176}
-              className="h-full w-full object-cover"
+              width={320}
+              height={320}
+              className="h-full w-full scale-[1.02] object-cover"
               priority
               sizes="48px"
             />
