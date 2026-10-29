@@ -56,6 +56,7 @@ export const siteConfig = {
     "bodega-venta-siguatepeque-ca5-p002",
     "casa-venta-hacienda-real-cortes-p003",
     "apartamento-alquiler-torre-nivo-las-lomas-p004",
+    "consultorio-alquiler-clinica-amueblada-p005",
   ],
 
   social: {

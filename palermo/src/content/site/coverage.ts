@@ -49,6 +49,10 @@ export const homeServiceLinks = [
     href: "/properties?type=industrial",
   },
   {
+    label: "Oficinas / consultorios",
+    href: "/properties?type=office",
+  },
+  {
     label: "Hablar por WhatsApp",
     href: "/contact",
   },
