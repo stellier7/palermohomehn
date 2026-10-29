@@ -1,0 +1,11 @@
+{
+  "name": "Palermo Real Estate Demo",
+  "install": "npm ci",
+  "terminals": [
+    {
+      "name": "dev",
+      "command": "npm run dev",
+      "description": "Vista previa local del demo Palermo"
+    }
+  ]
+}
