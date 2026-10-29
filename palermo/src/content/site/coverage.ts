@@ -19,6 +19,12 @@ export const coverageCities: CoverageCity[] = [
     matchNames: ["Siguatepeque"],
     featured: true,
   },
+  {
+    label: "Cortés",
+    slug: "cortes",
+    matchNames: ["Cortés", "Cortes", "San Pedro Sula"],
+    featured: true,
+  },
 ];
 
 export const homeServiceLinks = [
@@ -31,16 +37,16 @@ export const homeServiceLinks = [
     href: "/properties?listing=rent",
   },
   {
+    label: "Casas",
+    href: "/properties?type=house",
+  },
+  {
     label: "Apartamentos",
     href: "/properties?type=apartment",
   },
   {
     label: "Bodegas",
     href: "/properties?type=industrial",
-  },
-  {
-    label: "Ver servicios",
-    href: "/services",
   },
   {
     label: "Hablar por WhatsApp",

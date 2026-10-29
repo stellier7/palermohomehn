@@ -54,7 +54,7 @@ export const siteConfig = {
   homeFeaturedPropertySlugs: [
     "apartamento-venta-torre-cipreses-san-ignacio-p001",
     "bodega-venta-siguatepeque-ca5-p002",
-    "terreno-venta-tegucigalpa-demo-p003",
+    "casa-venta-hacienda-real-cortes-p003",
     "apartamento-alquiler-tegucigalpa-demo-p004",
   ],
 
@@ -89,7 +89,7 @@ export const siteConfig = {
       "Palermo Home is a Honduras real-estate firm focused on high-level rental and sales. Separate from AirHome HN short-term furnished stays. [PENDING] Team bio.",
     trustPoints: [
       { label: "Enfoque", value: "Renta y venta" },
-      { label: "Cobertura", value: "Tegucigalpa · Siguatepeque" },
+      { label: "Cobertura", value: "Tegucigalpa · Siguatepeque · Cortés" },
       { label: "Idiomas", value: "Español · English" },
     ],
   },
