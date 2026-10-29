@@ -30,6 +30,16 @@ export function SiteFooter() {
             >
               Tel. {siteConfig.phone}
             </a>
+            {siteConfig.social?.instagram ? (
+              <a
+                className="focus-ring inline-flex items-center py-0.5 text-accent transition-colors hover:text-accent-hover"
+                href={siteConfig.social.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {siteConfig.social.instagramHandle}
+              </a>
+            ) : null}
           </p>
           {office ? (
             <p className="leading-snug">

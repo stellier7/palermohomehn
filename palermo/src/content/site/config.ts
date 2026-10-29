@@ -55,8 +55,13 @@ export const siteConfig = {
     "apartamento-venta-torre-cipreses-san-ignacio-p001",
     "bodega-venta-siguatepeque-ca5-p002",
     "casa-venta-hacienda-real-cortes-p003",
-    "apartamento-alquiler-tegucigalpa-demo-p004",
+    "apartamento-alquiler-torre-nivo-las-lomas-p004",
   ],
+
+  social: {
+    instagram: "https://instagram.com/palermohomehn",
+    instagramHandle: "@palermohomehn",
+  },
 
   services: [
     {

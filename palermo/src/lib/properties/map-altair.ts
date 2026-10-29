@@ -61,7 +61,9 @@ function mapPropertyType(label: string): PropertyType {
 
 function parseNumber(value: string | null | undefined): number | undefined {
   if (!value) return undefined;
-  const n = Number.parseInt(value.replace(/\D/g, ""), 10);
+  const match = value.replace(",", ".").match(/(\d+(?:\.\d+)?)/);
+  if (!match) return undefined;
+  const n = Number.parseFloat(match[1]);
   return Number.isFinite(n) ? n : undefined;
 }
 
