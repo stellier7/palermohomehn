@@ -38,7 +38,7 @@ export function HomeGallery() {
         <p className="type-meta-caps text-accent">Galería</p>
         <h2 className="type-display-section mt-3 text-accent">Ambientes</h2>
         <p className="prose-editorial mt-4">
-          Fotos placeholder — reemplazar con el portafolio real de Palermo.
+          Una muestra del portafolio actual de Palermo Home.
         </p>
       </RevealOnScroll>
       <div className="grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
@@ -55,6 +55,7 @@ export function HomeGallery() {
                 alt={image.alt}
                 fill
                 sizes="(max-width: 768px) 50vw, 25vw"
+                unoptimized
                 className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03] motion-reduce:transition-none"
               />
             </button>
@@ -88,6 +89,7 @@ export function HomeGallery() {
               sizes="100vw"
               className="object-contain"
               priority
+              unoptimized
             />
           </div>
         </div>

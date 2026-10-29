@@ -29,6 +29,7 @@ export function PropertyListingImage({
         fill
         priority={priority}
         sizes={sizes}
+        unoptimized
         className={`listing-image object-cover object-center ${className} ${
           needsZoom ? "listing-image--zoomed" : ""
         }`}

@@ -1,7 +1,6 @@
 import { RevealOnScroll } from "@/components/motion/RevealOnScroll";
 import { Section } from "@/components/layout/Section";
 import { Button } from "@/components/ui/Button";
-import { siteConfig } from "@/content/site/config";
 import { buildWhatsAppUrl, isWhatsAppReady } from "@/lib/contact/whatsapp";
 
 export function HomeContactCta() {
@@ -29,8 +28,8 @@ export function HomeContactCta() {
           >
             {waReady ? "Contactar por WhatsApp" : "Ir a contacto"}
           </Button>
-          <Button href={`mailto:${siteConfig.contactEmail}`} variant="outline">
-            Email
+          <Button href="/contact" variant="outline">
+            Más formas de contacto
           </Button>
         </div>
       </RevealOnScroll>

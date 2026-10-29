@@ -96,6 +96,7 @@ export function ParallaxMedia({
           fill
           priority={priority}
           sizes="100vw"
+          unoptimized
           className={`object-cover ${imageClassName}`.trim()}
         />
       </div>

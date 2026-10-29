@@ -7,7 +7,7 @@ import { buildSiteMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = buildSiteMetadata({
   title: "Contacto",
-  description: "Contacto de Palermo — WhatsApp, teléfono y email (placeholders en demo).",
+  description: "Contacto de Palermo Home — WhatsApp y teléfono en Tegucigalpa.",
   path: "/contact",
 });
 
@@ -21,8 +21,7 @@ export default function ContactPage() {
         <div>
           <h1 className="font-display text-5xl sm:text-6xl">Contacto</h1>
           <p className="prose-editorial mt-6 max-w-xl">
-            WhatsApp y teléfono de Palermo Home. Email y dirección de oficina pendientes de
-            confirmar.
+            Atención directa por WhatsApp. Oficina en Tegucigalpa, visitas por cita.
           </p>
           <div className="mt-10 space-y-6 text-sm text-muted">
             <p>
@@ -44,19 +43,23 @@ export default function ContactPage() {
               <span className="block text-xs uppercase tracking-[0.2em]">Teléfono</span>
               <span className="text-lg text-foreground">{siteConfig.phone}</span>
             </p>
-            <p>
-              <span className="block text-xs uppercase tracking-[0.2em]">Email</span>
-              <a
-                className="focus-ring text-lg text-foreground"
-                href={`mailto:${siteConfig.contactEmail}`}
-              >
-                {siteConfig.contactEmail}
-              </a>
-            </p>
+            {siteConfig.social?.instagram ? (
+              <p>
+                <span className="block text-xs uppercase tracking-[0.2em]">Instagram</span>
+                <a
+                  className="focus-ring text-lg text-foreground"
+                  href={siteConfig.social.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {siteConfig.social.instagramHandle}
+                </a>
+              </p>
+            ) : null}
             {siteConfig.offices.map((office) => (
               <p key={office.city}>
                 <span className="block text-xs uppercase tracking-[0.2em]">Ubicación</span>
-                {office.address}
+                <span className="text-lg text-foreground">{office.address}</span>
               </p>
             ))}
           </div>

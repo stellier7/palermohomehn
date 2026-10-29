@@ -37,10 +37,9 @@ export function HomeLocation() {
               />
             ) : (
               <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 p-6 text-center">
-                <p className="type-meta-caps text-accent">Mapa</p>
+                <p className="type-meta-caps text-accent">Tegucigalpa</p>
                 <p className="prose-editorial max-w-sm text-muted">
-                  [PENDIENTE] Pegar URL de embed de Google Maps en{" "}
-                  <code className="text-sm">siteConfig.offices[0].mapEmbedUrl</code>
+                  Atención en la capital · visitas privadas por WhatsApp.
                 </p>
               </div>
             )}

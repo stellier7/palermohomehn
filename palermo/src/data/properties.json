@@ -4,14 +4,14 @@
     "description": "Demo Palermo — bienes raíces. Contenido placeholder.",
     "logo": "/images/site/logo-palermo-home.png",
     "address": {
-      "street": "[PENDIENTE] Dirección",
+      "street": "Tegucigalpa · atención por cita",
       "city": "Tegucigalpa",
       "region": "Francisco Morazán",
       "country": "Honduras"
     },
     "phone": "+504 8819-5809",
     "mobile": "+504 8819-5809",
-    "email": "[PENDIENTE] correo@palermo.hn",
+    "email": "",
     "whatsapp": "50488195809",
     "sourceWebsite": "",
     "scrapedAt": "2026-10-29"
@@ -173,7 +173,7 @@
       "slug": "consultorio-alquiler-clinica-amueblada",
       "url": "",
       "title": "Clínica / consultorio amueblado — 26 m²",
-      "description": "Clínica / consultorio amueblado de 26 m² — ideal para profesionales de la salud.\n\nEspacio funcional y listo para operar, pensado para odontólogos, médicos, psicólogos, nutricionistas, fisioterapeutas y afines. Ubicación estratégica en un entorno profesional de alta demanda (Tegucigalpa — zona exacta a confirmar).\n\nDos modalidades de renta:\n• Opción 1 — Consultorio amueblado (sin equipo dental): US$20 / m²\n  Incluye escritorios ejecutivos, sillas de atención y recepción, impresora, aire acondicionado, muebles de almacenamiento y ambientación. Listo para operar de inmediato.\n• Opción 2 — Consultorio odontológico totalmente equipado: US$25 / m²\n  Incluye silla dental ADEC, equipo de rayos X con RVG, autoclave, cavitron, televisión y set complementario. Llave en mano.\n\nMantenimiento: US$3.05 / m² (consumo de energía eléctrica no incluido).\n\nCaracterísticas destacadas:\n• 26 m²\n• Amueblado\n• Dos opciones de equipamiento\n• Recepción / áreas comunes del edificio\n• Aire acondicionado\n• Vista urbana\n\nPara ficha técnica o visita privada: WhatsApp +504 8819-5809.",
+      "description": "Clínica / consultorio amueblado de 26 m² — ideal para profesionales de la salud.\n\nEspacio funcional y listo para operar, pensado para odontólogos, médicos, psicólogos, nutricionistas, fisioterapeutas y afines. Ubicación estratégica en Tegucigalpa, en un entorno profesional de alta demanda.\n\nDos modalidades de renta:\n• Opción 1 — Consultorio amueblado (sin equipo dental): US$20 / m²\n  Incluye escritorios ejecutivos, sillas de atención y recepción, impresora, aire acondicionado, muebles de almacenamiento y ambientación. Listo para operar de inmediato.\n• Opción 2 — Consultorio odontológico totalmente equipado: US$25 / m²\n  Incluye silla dental ADEC, equipo de rayos X con RVG, autoclave, cavitron, televisión y set complementario. Llave en mano.\n\nMantenimiento: US$3.05 / m² (consumo de energía eléctrica no incluido).\n\nCaracterísticas destacadas:\n• 26 m²\n• Amueblado\n• Dos opciones de equipamiento\n• Recepción / áreas comunes del edificio\n• Aire acondicionado\n• Vista urbana\n\nPara ficha técnica o visita privada: WhatsApp +504 8819-5809.",
       "descriptionHtml": "",
       "listingType": "rent",
       "propertyType": "Oficina",
@@ -203,7 +203,7 @@
         "Canon base": "US$20 / m² (sin equipo dental)",
         "Canon odontológico": "US$25 / m² (equipado)",
         "Mantenimiento": "US$3.05 / m² (sin energía)",
-        "Zona": "[PENDIENTE — torre / colonia]"
+        "Zona": "Tegucigalpa"
       },
       "schema": {}
     }

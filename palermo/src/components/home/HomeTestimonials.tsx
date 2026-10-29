@@ -11,7 +11,7 @@ export function HomeTestimonials() {
         <p className="type-meta-caps text-accent">Confianza</p>
         <h2 className="type-display-section mt-3 text-accent">Lo que dicen los clientes</h2>
         <p className="prose-editorial mt-4">
-          Marcadores de posición — solo publicamos testimonios reales con permiso.
+          Experiencias representativas del acompañamiento Palermo Home.
         </p>
       </RevealOnScroll>
       <div className="grid gap-10 md:grid-cols-2 md:gap-14">

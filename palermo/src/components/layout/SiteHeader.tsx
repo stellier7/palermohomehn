@@ -40,6 +40,7 @@ export function SiteHeader() {
               className="h-full w-full scale-[1.02] object-cover"
               priority
               sizes="48px"
+              unoptimized
             />
           </span>
           <span className="font-display text-[1.25rem] leading-none tracking-tight text-accent sm:text-[1.4rem]">

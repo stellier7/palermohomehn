@@ -76,7 +76,7 @@ export function SiteFooter() {
             >
               {siteConfig.sisterBrand.name}
             </a>
-            <span className="text-muted"> — rentas amuebladas (marca aparte)</span>
+            <span className="text-muted"> — ¿buscas Airbnb? Alojamientos amueblados</span>
           </p>
         </Container>
       ) : null}
@@ -96,7 +96,7 @@ export function SiteFooter() {
               iAGO Digital
             </a>
           </p>
-          <p className="type-meta sm:text-right">Demo · contenido placeholder</p>
+          <p className="type-meta sm:text-right">Tegucigalpa, Honduras</p>
         </div>
       </Container>
     </footer>

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { HomeHero } from "@/components/home/HomeHero";
 import { HomeCategoryNav } from "@/components/home/HomeCategoryNav";
 import { HomeCoverage } from "@/components/home/HomeCoverage";
@@ -40,20 +41,34 @@ export default async function HomePage() {
       <HomeHero heroImage={heroImage} />
 
       <Section>
-        <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+        <div className="grid gap-8 lg:grid-cols-[auto_1fr] lg:items-end lg:gap-12">
           <RevealOnScroll>
-            <p className="type-meta-caps text-accent">{about.eyebrow}</p>
-            <h2 className="type-display-section mt-3 text-accent">{about.headline}</h2>
-          </RevealOnScroll>
-          <RevealOnScroll delayMs={100}>
-            <div className="space-y-4">
-              {about.paragraphs.map((paragraph) => (
-                <p key={paragraph.slice(0, 24)} className="prose-editorial">
-                  {paragraph}
-                </p>
-              ))}
+            <div className="relative mx-auto h-28 w-28 overflow-hidden rounded-full bg-[color:var(--accent)] shadow-[var(--shadow-soft)] ring-1 ring-[color-mix(in_srgb,var(--brand-gold)_45%,transparent)] sm:h-32 sm:w-32 lg:mx-0">
+              <Image
+                src={about.portrait}
+                alt={about.portraitAlt}
+                width={128}
+                height={128}
+                className="h-full w-full object-cover"
+                unoptimized
+              />
             </div>
           </RevealOnScroll>
+          <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+            <RevealOnScroll>
+              <p className="type-meta-caps text-accent">{about.eyebrow}</p>
+              <h2 className="type-display-section mt-3 text-accent">{about.headline}</h2>
+            </RevealOnScroll>
+            <RevealOnScroll delayMs={100}>
+              <div className="space-y-4">
+                {about.paragraphs.slice(0, 2).map((paragraph) => (
+                  <p key={paragraph.slice(0, 24)} className="prose-editorial">
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
+            </RevealOnScroll>
+          </div>
         </div>
         <RevealOnScroll delayMs={140} className="mt-12 grid gap-6 sm:grid-cols-3">
           {about.trustPoints.map((point) => (
@@ -73,8 +88,7 @@ export default async function HomePage() {
             <p className="type-meta-caps text-accent">Selección</p>
             <h2 className="type-display-section mt-3 text-accent">Propiedades destacadas</h2>
             <p className="prose-editorial mt-4 max-w-xl">
-              Fichas de demostración. Precios y datos reales se cargan cuando el dueño los
-              confirme.
+              Selección actual del portafolio. Consultá por WhatsApp para visitas y detalle.
             </p>
           </div>
           <Button href="/properties" variant="primary">
