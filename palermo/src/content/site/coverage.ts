@@ -14,9 +14,9 @@ export const coverageCities: CoverageCity[] = [
     featured: true,
   },
   {
-    label: "[PENDIENTE] Zona 2",
-    slug: "zona-2",
-    matchNames: ["Zona 2"],
+    label: "Siguatepeque",
+    slug: "siguatepeque",
+    matchNames: ["Siguatepeque"],
     featured: true,
   },
 ];
@@ -31,12 +31,12 @@ export const homeServiceLinks = [
     href: "/properties?listing=rent",
   },
   {
-    label: "Casas",
-    href: "/properties?type=house",
-  },
-  {
     label: "Apartamentos",
     href: "/properties?type=apartment",
+  },
+  {
+    label: "Bodegas",
+    href: "/properties?type=industrial",
   },
   {
     label: "Ver servicios",

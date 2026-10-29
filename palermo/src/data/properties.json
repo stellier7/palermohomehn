@@ -27,7 +27,7 @@
       "slug": "apartamento-venta-torre-cipreses-san-ignacio",
       "url": "",
       "title": "Apartamento en Torre Cipreses — San Ignacio",
-      "description": "Apartamento de un dormitorio en Torre Cipreses, San Ignacio, Tegucigalpa.\n\nEspacio contemporáneo, luminoso y listo para habitar: sala-comedor integrada con acceso a balcón privado y vista hacia el entorno urbano y las montañas de la capital. Acabados modernos en tonos neutros, piso de porcelanato y ambientación de alto nivel.\n\nLa cocina es lineal y funcional, con gabinetes en madera clara, cubierta blanca y electrodomésticos en acero inoxidable (estufa, campana y microondas). El baño completo cuenta con ducha encristalada y acabados contemporáneos. La habitación principal ofrece closet-ready staging, aire acondicionado tipo split y persianas tipo zebra.\n\nIdeal como residencia ejecutiva o inversión en una de las zonas más cotizadas de Tegucigalpa.\n\nCaracterísticas destacadas:\n• 1 habitación · 1 baño\n• Sala-comedor abierta con balcón\n• Cocina equipada\n• Aire acondicionado\n• Torre con ubicación privilegiada en San Ignacio\n\nÁrea en m² / parqueo: confirmar con Palermo Home.\nPrecio: US$160,000",
+      "description": "Apartamento amueblado de un dormitorio en Torre Cipreses, San Ignacio, Tegucigalpa.\n\nEspacio contemporáneo, luminoso y listo para habitar: sala-comedor integrada con acceso a balcón privado y vista hacia el entorno urbano y las montañas de la capital. Acabados modernos en tonos neutros, piso de porcelanato y ambientación de alto nivel.\n\nLa cocina es lineal y funcional, con gabinetes en madera clara, cubierta blanca y electrodomésticos en acero inoxidable (estufa, campana y microondas). El baño completo cuenta con ducha encristalada y acabados contemporáneos. La habitación principal incluye aire acondicionado tipo split y persianas tipo zebra.\n\nSe entrega amueblado, con parqueo incluido. Amenidades del apartamento: balcón, A/C, cocina equipada, TV y acabados modernos. Amenidades de la torre: confirmar con Palermo Home (lobby, seguridad, áreas comunes).\n\nIdeal como residencia ejecutiva o inversión en una de las zonas más cotizadas de Tegucigalpa.\n\nCaracterísticas destacadas:\n• 1 habitación · 1 baño\n• Amueblado\n• Parqueo incluido\n• Sala-comedor abierta con balcón\n• Cocina equipada · Aire acondicionado\n• Torre Cipreses — San Ignacio\n\nÁrea en m²: confirmar con Palermo Home.\nPrecio: US$160,000",
       "descriptionHtml": "",
       "listingType": "sale",
       "propertyType": "Apartamento",
@@ -38,7 +38,7 @@
       "condition": "Usado",
       "bedrooms": "1",
       "bathrooms": "1",
-      "garage": null,
+      "garage": "1",
       "code": "PH-CIP-001",
       "coverImage": "/images/properties/torre-cipreses/01.jpg",
       "images": [
@@ -54,37 +54,39 @@
         "Torre": "Cipreses",
         "Zona": "San Ignacio",
         "Área": "[PENDIENTE m²]",
-        "Parqueo": "[PENDIENTE]"
+        "Parqueo": "Incluido",
+        "Amueblado": "Sí"
       },
       "schema": {}
     },
     {
       "id": "p002",
-      "slug": "apartamento-venta-tegucigalpa-demo",
+      "slug": "bodega-venta-siguatepeque-ca5",
       "url": "",
-      "title": "[PENDIENTE] Apartamento — nombre de la propiedad",
-      "description": "Apartamento de demostración. Reemplazar con ficha real.\n\nUbicación: [PENDIENTE torre / colonia], Tegucigalpa.\nÁrea: [PENDIENTE m²].\nHabitaciones: [PENDIENTE] · Baños: [PENDIENTE].\n\nCaracterísticas: [PENDIENTE 1], [PENDIENTE 2], [PENDIENTE 3].\n\nPrecio: consultar.",
+      "title": "Bodega en Siguatepeque — Centro logístico CA-5",
+      "description": "Bodega / centro logístico en Siguatepeque, con conectividad inmediata a la CA-5.\n\nEspacio industrial ideal para almacenamiento, distribución u operación logística en el corredor central de Honduras. Instalaciones modernas tipo centro logístico, con andenes de carga y acceso para transporte pesado.\n\nOpciones disponibles:\n• Renta desde US$4 por m²\n• Oferta especial en liquidación: L. 5,500,000\n\nUbicación estratégica en Siguatepeque para empresas que necesitan salida rápida hacia Tegucigalpa, el norte y el corredor CA-5.\n\nCaracterísticas destacadas:\n• Bodega / uso industrial-logístico\n• Conectividad inmediata con la CA-5\n• Andenes de carga\n• Centro logístico en Siguatepeque\n\nÁrea exacta en m² y unidad disponible: confirmar con Palermo Home.\nPrecio liquidación: L. 5,500,000 · Renta desde US$4/m²",
       "descriptionHtml": "",
       "listingType": "sale",
-      "propertyType": "Apartamento",
-      "priceLabel": "Consultar precio",
+      "propertyType": "Bodega",
+      "priceLabel": "L. 5,500,000",
       "country": "Honduras",
-      "region": "Francisco Morazán",
-      "city": "Tegucigalpa",
+      "region": "Comayagua",
+      "city": "Siguatepeque",
       "condition": "Usado",
-      "bedrooms": "2",
-      "bathrooms": "2",
-      "garage": "1",
-      "code": "P-002",
-      "coverImage": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1600&q=80",
+      "bedrooms": null,
+      "bathrooms": null,
+      "garage": null,
+      "code": "PH-SIG-B01",
+      "coverImage": "/images/properties/bodega-siguatepeque/02-centro-logistico.jpg",
       "images": [
-        "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1600&q=80",
-        "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1600&q=80",
-        "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1600&q=80"
+        "/images/properties/bodega-siguatepeque/02-centro-logistico.jpg",
+        "/images/properties/bodega-siguatepeque/01-flyer.jpg"
       ],
       "attributes": {
-        "Área": "[PENDIENTE]",
-        "Nota": "Ficha placeholder para pitch"
+        "Tipo": "Bodega / centro logístico",
+        "Acceso": "CA-5 inmediata",
+        "Renta": "Desde US$4/m²",
+        "Liquidación": "L. 5,500,000"
       },
       "schema": {}
     },

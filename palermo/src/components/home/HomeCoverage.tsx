@@ -56,8 +56,7 @@ export function HomeCoverage({ featured, secondary }: HomeCoverageProps) {
         <p className="type-meta-caps text-accent">Cobertura</p>
         <h2 className="type-display-section mt-3 text-accent">Zonas de atención</h2>
         <p className="prose-editorial mt-4">
-          Cobertura de demostración centrada en Tegucigalpa. Ampliar cuando el dueño confirme
-          zonas.
+          Presencia en Tegucigalpa y Siguatepeque. Explore el portafolio por zona.
         </p>
       </RevealOnScroll>
 
