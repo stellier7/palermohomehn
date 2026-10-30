@@ -50,10 +50,23 @@ export function PropertyGallery({ images }: PropertyGalleryProps) {
   );
 
   useEffect(() => {
-    thumbRefs.current[active]?.scrollIntoView({
-      behavior: "smooth",
-      block: "nearest",
-      inline: "center",
+    const thumb = thumbRefs.current[active];
+    const rail = thumb?.parentElement;
+    if (!thumb || !rail) {
+      return;
+    }
+    const railBox = rail.getBoundingClientRect();
+    const thumbBox = thumb.getBoundingClientRect();
+    const fullyInside = thumbBox.left >= railBox.left - 1 && thumbBox.right <= railBox.right + 1;
+    if (fullyInside) {
+      return;
+    }
+    const nextLeft =
+      rail.scrollLeft + (thumbBox.left - railBox.left) - (railBox.width - thumbBox.width) / 2;
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    rail.scrollTo({
+      left: Math.max(0, nextLeft),
+      behavior: reduceMotion ? "auto" : "smooth",
     });
   }, [active]);
 
