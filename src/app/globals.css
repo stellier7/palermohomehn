@@ -164,6 +164,14 @@ body::before {
   color: var(--brand-gold);
 }
 
+.site-nav-link {
+  color: var(--accent);
+}
+
+.site-nav-link:hover {
+  color: var(--accent-hover);
+}
+
 .type-caption {
   max-width: var(--type-measure);
   font-size: var(--type-body);
