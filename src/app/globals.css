@@ -915,6 +915,13 @@ body::before {
   }
 }
 
+@media (min-width: 1024px) {
+  .home-services-copy,
+  .home-services-actions {
+    margin-top: 5.25rem;
+  }
+}
+
 .home-services-kicker {
   font-size: 0.8125rem;
   font-weight: 600;
