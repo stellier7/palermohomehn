@@ -10,7 +10,11 @@ export const siteConfig = {
   name: "Palermo Home",
   legalName: "Palermo Home",
   heroImage: "/images/site/hero-poster.jpg",
-  /** Silent loop behind the homepage hero. Leave empty to keep the still. */
+  /**
+   * Silent homepage loop. The file itself plays forward, then back, a little
+   * slower than real time, so the loop does not cut to the first frame.
+   * Leave empty to keep the still.
+   */
   heroVideo: "/hero.mp4",
   /** From Instagram @palermohomehn */
   tagline: "Inmobiliaria con portafolio exclusivo de alto nivel en Honduras",
