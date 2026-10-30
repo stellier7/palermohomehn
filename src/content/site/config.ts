@@ -9,7 +9,9 @@
 export const siteConfig = {
   name: "Palermo Home",
   legalName: "Palermo Home",
-  heroImage: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=2400&q=80",
+  heroImage: "/images/site/hero-poster.jpg",
+  /** Silent loop behind the homepage hero. Leave empty to keep the still. */
+  heroVideo: "/hero.mp4",
   /** From Instagram @palermohomehn */
   tagline: "Inmobiliaria con portafolio exclusivo de alto nivel en Honduras",
   /** One short supporting sentence under the brand (Spanish). */

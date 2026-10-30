@@ -16,7 +16,8 @@ export function HomeHero({ heroImage }: HomeHeroProps) {
   return (
     <ParallaxMedia
       src={heroImage}
-      alt="Residencia de alto nivel — imagen hero de Palermo Home (reemplazar)"
+      alt="Vista aérea de Tegucigalpa al atardecer"
+      videoSrc={siteConfig.heroVideo}
       priority
       minHeightClass="hero-shell-min"
       imageClassName="hero-bg-image"

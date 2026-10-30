@@ -7,6 +7,7 @@ import { useEffect, useRef, useState, type ReactNode } from "react";
 type ParallaxMediaProps = {
   src: string;
   alt: string;
+  videoSrc?: string;
   priority?: boolean;
   children?: ReactNode;
   className?: string;
@@ -18,6 +19,7 @@ type ParallaxMediaProps = {
 export function ParallaxMedia({
   src,
   alt,
+  videoSrc,
   priority,
   children,
   className = "",
@@ -26,11 +28,15 @@ export function ParallaxMedia({
   imageClassName = "",
 }: ParallaxMediaProps) {
   const sectionRef = useRef<HTMLElement | null>(null);
+  const videoRef = useRef<HTMLVideoElement | null>(null);
   const targetOffset = useRef(0);
   const currentOffset = useRef(0);
   const frameRef = useRef<number | null>(null);
   const [renderOffset, setRenderOffset] = useState(0);
   const [reduceMotion, setReduceMotion] = useState(false);
+  const [videoReady, setVideoReady] = useState(false);
+  const [videoFailed, setVideoFailed] = useState(false);
+  const showVideo = Boolean(videoSrc) && !reduceMotion && !videoFailed;
 
   useEffect(() => {
     const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -77,6 +83,47 @@ export function ParallaxMedia({
     };
   }, [reduceMotion]);
 
+  useEffect(() => {
+    const video = videoRef.current;
+    const section = sectionRef.current;
+    if (!video || !showVideo) {
+      return;
+    }
+    video.muted = true;
+    let onScreen = true;
+
+    const syncPlayback = () => {
+      if (document.hidden || !onScreen) {
+        video.pause();
+        return;
+      }
+      void video.play().catch((error: unknown) => {
+        if (error instanceof DOMException && error.name === "AbortError") {
+          return;
+        }
+        setVideoReady(false);
+      });
+    };
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        onScreen = entry.isIntersecting;
+        syncPlayback();
+      },
+      { threshold: 0.2 },
+    );
+    if (section) {
+      observer.observe(section);
+    }
+    document.addEventListener("visibilitychange", syncPlayback);
+    syncPlayback();
+
+    return () => {
+      observer.disconnect();
+      document.removeEventListener("visibilitychange", syncPlayback);
+    };
+  }, [showVideo]);
+
   return (
     <section
       ref={sectionRef}
@@ -99,6 +146,22 @@ export function ParallaxMedia({
           unoptimized
           className={`object-cover ${imageClassName}`.trim()}
         />
+        {showVideo ? (
+          <video
+            ref={videoRef}
+            className={`hero-bg-video object-cover ${imageClassName} ${videoReady ? "is-ready" : ""}`.trim()}
+            src={videoSrc ?? ""}
+            poster={normalizeWasiImageUrl(src)}
+            muted
+            loop
+            playsInline
+            autoPlay
+            preload="auto"
+            aria-hidden
+            onCanPlay={() => setVideoReady(true)}
+            onError={() => setVideoFailed(true)}
+          />
+        ) : null}
       </div>
       <div className={`absolute inset-0 ${overlayClassName}`} />
       {children}

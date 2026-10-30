@@ -208,6 +208,19 @@ body::before {
   object-position: center 42%;
 }
 
+.hero-bg-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.hero-bg-video.is-ready {
+  opacity: 1;
+}
+
 @media (min-width: 640px) {
   .hero-bg-image {
     object-position: center 38%;
@@ -250,7 +263,7 @@ body::before {
   flex-direction: column;
   justify-content: flex-end;
   padding-top: clamp(4.75rem, 11vh, 7rem);
-  padding-bottom: max(1.25rem, env(safe-area-inset-bottom, 0px));
+  padding-bottom: max(5.75rem, calc(env(safe-area-inset-bottom, 0px) + 4.5rem));
 }
 
 @media (min-width: 640px) {
@@ -854,6 +867,10 @@ body::before {
 
   .property-card:hover {
     transform: none;
+  }
+
+  .hero-bg-video {
+    display: none;
   }
 
   .property-marquee-track--animate,
