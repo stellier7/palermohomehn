@@ -122,7 +122,7 @@ export function parseListingMode(value: string | null | undefined): ListingMode 
   return "sale";
 }
 
-const FILTER_PROPERTY_TYPES: PropertyType[] = [
+export const PROPERTY_FILTER_TYPES: readonly PropertyType[] = [
   "house",
   "apartment",
   "villa",
@@ -138,7 +138,7 @@ export function parsePropertyFilterType(value: string | undefined): PropertyType
   if (!value) {
     return undefined;
   }
-  return FILTER_PROPERTY_TYPES.includes(value as PropertyType)
+  return PROPERTY_FILTER_TYPES.includes(value as PropertyType)
     ? (value as PropertyType)
     : undefined;
 }

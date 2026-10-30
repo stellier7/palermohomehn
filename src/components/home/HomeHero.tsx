@@ -1,21 +1,18 @@
 "use client";
 
 import Link from "next/link";
+import { HeroCatalogSearch } from "@/components/home/HeroCatalogSearch";
 import { ParallaxMedia } from "@/components/motion/ParallaxMedia";
 import { RevealOnScroll } from "@/components/motion/RevealOnScroll";
 import { Container } from "@/components/layout/Container";
 import { Button } from "@/components/ui/Button";
 import { siteConfig } from "@/content/site/config";
-import { buildWhatsAppUrl, isWhatsAppReady } from "@/lib/contact/whatsapp";
 
 type HomeHeroProps = {
   heroImage: string;
 };
 
 export function HomeHero({ heroImage }: HomeHeroProps) {
-  const whatsappUrl = buildWhatsAppUrl();
-  const waReady = isWhatsAppReady();
-
   return (
     <ParallaxMedia
       src={heroImage}
@@ -42,7 +39,7 @@ export function HomeHero({ heroImage }: HomeHeroProps) {
           <p className="prose-editorial mt-5 max-w-2xl sm:mt-6">{siteConfig.heroLead}</p>
         </RevealOnScroll>
 
-        <RevealOnScroll delayMs={180} className="hero-actions w-full max-w-none sm:max-w-[40rem]">
+        <RevealOnScroll delayMs={180} className="hero-actions w-full max-w-none">
           <div className="hero-catalog-actions">
             <Button
               href="/properties?listing=sale"
@@ -59,22 +56,13 @@ export function HomeHero({ heroImage }: HomeHeroProps) {
               En renta
             </Button>
           </div>
-          <div className="mt-3 flex flex-wrap items-center gap-x-5 gap-y-2">
-            <Button
-              href={whatsappUrl}
-              variant="ghost"
-              className="hero-cta-btn"
-              {...(waReady ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-            >
-              WhatsApp {siteConfig.whatsapp.display}
-            </Button>
-            <Link
-              href="/about"
-              className="focus-ring hero-ink-link type-meta inline-flex min-h-11 items-center py-2 underline underline-offset-4"
-            >
-              Conocer Palermo Home
-            </Link>
-          </div>
+          <HeroCatalogSearch />
+          <Link
+            href="/about"
+            className="focus-ring hero-ink-link type-meta inline-flex min-h-11 items-center py-2 underline underline-offset-4"
+          >
+            Conocer Palermo Home
+          </Link>
         </RevealOnScroll>
       </Container>
     </ParallaxMedia>

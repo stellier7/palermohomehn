@@ -1,20 +1,7 @@
-import type { PropertyType } from "@/lib/properties/types";
-import { formatPropertyType } from "@/lib/properties/specs";
+import { formatPropertyType, PROPERTY_FILTER_TYPES } from "@/lib/properties/specs";
 import { coverageCities } from "@/content/site/coverage";
 import { propertyCopy } from "@/lib/i18n/property-copy";
 import { Button } from "@/components/ui/Button";
-
-const TYPES: PropertyType[] = [
-  "house",
-  "apartment",
-  "villa",
-  "land",
-  "commercial",
-  "office",
-  "retail",
-  "industrial",
-  "condominium",
-];
 
 type DirectoryFiltersProps = {
   currentType?: string;
@@ -67,7 +54,7 @@ export function DirectoryFilters({
           className="input-soft focus-ring border border-accent/25 bg-background/50 px-4 py-2.5 outline-none"
         >
           <option value="">Todos</option>
-          {TYPES.map((type) => (
+          {PROPERTY_FILTER_TYPES.map((type) => (
             <option key={type} value={type}>
               {formatPropertyType(type)}
             </option>
