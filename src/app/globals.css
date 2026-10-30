@@ -786,6 +786,53 @@ body::before {
   color: #fff;
 }
 
+.coverage-marquee-viewport {
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, #000 3%, #000 97%, transparent);
+}
+
+.coverage-marquee-viewport--static {
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+  mask-image: none;
+}
+
+.coverage-marquee-track {
+  display: flex;
+  width: max-content;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.coverage-marquee-track--animate {
+  animation-name: coverage-marquee-scroll;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.coverage-marquee-viewport:hover .coverage-marquee-track--animate,
+.coverage-marquee-viewport:focus-within .coverage-marquee-track--animate {
+  animation-play-state: paused;
+}
+
+.coverage-marquee-item {
+  flex: none;
+  width: clamp(15rem, 72vw, 18rem);
+  scroll-snap-align: start;
+}
+
+@keyframes coverage-marquee-scroll {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
 .service-filter-link {
   animation: fade-up var(--motion-duration) cubic-bezier(0.22, 1, 0.36, 1) both;
 }
@@ -809,7 +856,8 @@ body::before {
     transform: none;
   }
 
-  .property-marquee-track--animate {
+  .property-marquee-track--animate,
+  .coverage-marquee-track--animate {
     animation: none;
   }
 

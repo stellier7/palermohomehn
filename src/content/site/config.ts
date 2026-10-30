@@ -59,6 +59,7 @@ export const siteConfig = {
     "casa-venta-hacienda-real-cortes-p003",
     "apartamento-alquiler-torre-nivo-las-lomas-p004",
     "consultorio-alquiler-clinica-amueblada-p005",
+    "casa-venta-santa-lucia-p006",
   ],
 
   social: {

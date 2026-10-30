@@ -17,8 +17,8 @@
     "scrapedAt": "2026-10-29"
   },
   "stats": {
-    "total": 5,
-    "forSale": 3,
+    "total": 6,
+    "forSale": 4,
     "forRent": 2
   },
   "properties": [
@@ -204,6 +204,43 @@
         "Canon odontológico": "US$25 / m² (equipado)",
         "Mantenimiento": "US$3.05 / m² (sin energía)",
         "Zona": "Tegucigalpa"
+      },
+      "schema": {}
+    },
+    {
+      "id": "p006",
+      "slug": "casa-venta-santa-lucia",
+      "url": "",
+      "title": "Casa en Santa Lucía",
+      "description": "Residencia de dos niveles en Santa Lucía, Francisco Morazán, entre pinares y jardín.\n\nLa fachada combina muros claros y columnas, con balcón en el nivel alto y parqueo cubierto bajo la casa. El jardín frontal queda contenido por un muro de piedra y vegetación alta.\n\nEn el interior hay sala con chimenea de piedra y puertas arqueadas al exterior, comedor junto a una ventana de arco, y cocina con isla, gabinetes de madera y estufa. Un segundo ambiente social reúne mesa larga y barra. Se aprecia un dormitorio con salida al jardín y un baño con ducha encristalada.\n\nEntorno de pinar en Santa Lucía, a las afueras de Tegucigalpa.\n\nPrecio, área en m² y distribución completa: confirmar con Palermo Home.",
+      "descriptionHtml": "",
+      "listingType": "sale",
+      "propertyType": "Casa",
+      "priceLabel": "Consultar precio",
+      "country": "Honduras",
+      "region": "Francisco Morazán",
+      "city": "Santa Lucía",
+      "condition": "Usado",
+      "bedrooms": null,
+      "bathrooms": null,
+      "garage": null,
+      "code": "PH-SLU-001",
+      "coverImage": "/images/properties/casa-santa-lucia/01.jpg",
+      "images": [
+        "/images/properties/casa-santa-lucia/01.jpg",
+        "/images/properties/casa-santa-lucia/02.jpg",
+        "/images/properties/casa-santa-lucia/03.jpg",
+        "/images/properties/casa-santa-lucia/04.jpg",
+        "/images/properties/casa-santa-lucia/05.jpg",
+        "/images/properties/casa-santa-lucia/06.jpg",
+        "/images/properties/casa-santa-lucia/07.jpg",
+        "/images/properties/casa-santa-lucia/08.jpg"
+      ],
+      "attributes": {
+        "Zona": "Santa Lucía",
+        "Entorno": "Pinar",
+        "Parqueo": "Cubierto",
+        "Precio": "Consultar"
       },
       "schema": {}
     }

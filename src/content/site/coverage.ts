@@ -25,6 +25,12 @@ export const coverageCities: CoverageCity[] = [
     matchNames: ["Cortés", "Cortes", "San Pedro Sula"],
     featured: true,
   },
+  {
+    label: "Santa Lucía",
+    slug: "santa-lucia",
+    matchNames: ["Santa Lucía", "Santa Lucia"],
+    featured: true,
+  },
 ];
 
 export const homeServiceLinks = [
