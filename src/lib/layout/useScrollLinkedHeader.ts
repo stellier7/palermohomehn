@@ -3,10 +3,12 @@
 import { useEffect, useRef, type RefObject } from "react";
 import { usePathname } from "next/navigation";
 
+const SCROLL_TOLERANCE = 8;
+
 /**
- * Hides the header with the scroll, then keeps it offscreen until the page
- * moves back up. The transform is written in the scroll listener so the bar
- * does not sit still for a frame and then jump.
+ * Hides the whole header once the page is scrolling down, and brings it
+ * back when the page scrolls up. The motion itself is a CSS transition.
+ * Tying translateY to the scroll position sliced the logo in half.
  */
 export function useScrollLinkedHeader(): RefObject<HTMLElement | null> {
   const headerRef = useRef<HTMLElement | null>(null);
@@ -19,99 +21,67 @@ export function useScrollLinkedHeader(): RefObject<HTMLElement | null> {
     }
 
     const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
-
-    let height = 0;
-    let offset = 0;
     let lastY = window.scrollY;
     let hidden = false;
 
-    const paint = () => {
+    const setHidden = (next: boolean) => {
       if (motion.matches) {
-        header.style.transform = "";
-        header.style.pointerEvents = "";
-        header.removeAttribute("inert");
-        hidden = false;
+        next = false;
+      }
+      if (next === hidden) {
         return;
       }
-
-      header.style.transform = `translate3d(0, ${offset}px, 0)`;
-      const fullyHidden = height > 0 && offset <= -height + 0.5;
-      if (fullyHidden === hidden) {
-        return;
-      }
-      hidden = fullyHidden;
-      header.style.pointerEvents = fullyHidden ? "none" : "";
-      if (fullyHidden) {
+      hidden = next;
+      header.classList.toggle("is-header-hidden", next);
+      if (next) {
         header.setAttribute("inert", "");
       } else {
         header.removeAttribute("inert");
       }
     };
 
-    const measure = () => {
-      height = header.getBoundingClientRect().height;
-      if (height > 0) {
-        offset = Math.min(0, Math.max(-height, offset));
-      }
-      paint();
-    };
-
-    const placeForScroll = (scrollY: number) => {
-      lastY = scrollY;
-      offset = scrollY <= 0 || height <= 0 ? 0 : -Math.min(height, scrollY);
-      paint();
-    };
-
     const onScroll = () => {
       const scrollY = window.scrollY;
       const delta = scrollY - lastY;
-      lastY = scrollY;
 
-      if (motion.matches || header.hasAttribute("data-nav-open")) {
-        offset = 0;
-        paint();
+      if (motion.matches || header.hasAttribute("data-nav-open") || scrollY <= 4) {
+        lastY = scrollY;
+        setHidden(false);
         return;
       }
 
-      if (scrollY <= 0) {
-        offset = 0;
-      } else if (height > 0) {
-        offset = Math.min(0, Math.max(-height, offset - delta));
-      } else {
-        offset = Math.min(0, offset - delta);
+      if (Math.abs(delta) < SCROLL_TOLERANCE) {
+        return;
       }
-      paint();
+
+      lastY = scrollY;
+      setHidden(delta > 0);
     };
 
-    const onMotionChange = () => {
-      if (motion.matches) {
-        offset = 0;
-      }
-      paint();
-    };
-
-    const observer = new ResizeObserver(measure);
-    observer.observe(header);
-    const menuObserver = new MutationObserver(() => {
+    const showForMenu = () => {
       if (!header.hasAttribute("data-nav-open")) {
         return;
       }
-      offset = 0;
       lastY = window.scrollY;
-      paint();
-    });
-    menuObserver.observe(header, { attributes: true, attributeFilter: ["data-nav-open"] });
-    measure();
-    placeForScroll(window.scrollY);
+      setHidden(false);
+    };
 
+    const menuObserver = new MutationObserver(showForMenu);
+    menuObserver.observe(header, {
+      attributes: true,
+      attributeFilter: ["data-nav-open"],
+    });
+    motion.addEventListener("change", onScroll);
     window.addEventListener("scroll", onScroll, { passive: true });
-    motion.addEventListener("change", onMotionChange);
+    onScroll();
 
     return () => {
-      observer.disconnect();
       menuObserver.disconnect();
+      motion.removeEventListener("change", onScroll);
       window.removeEventListener("scroll", onScroll);
-      motion.removeEventListener("change", onMotionChange);
+      header.classList.remove("is-header-hidden");
+      header.removeAttribute("inert");
+      hidden = false;
     };
   }, [pathname]);
 

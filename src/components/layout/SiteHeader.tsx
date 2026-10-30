@@ -11,9 +11,7 @@ export function SiteHeader() {
   const headerRef = useScrollLinkedHeader();
 
   return (
-    <>
-      <div aria-hidden="true" className="site-header-spacer" />
-      <header ref={headerRef} className="site-header">
+    <header ref={headerRef} className="site-header">
         <a
           href="#contenido-principal"
           className="focus-ring sr-only left-4 top-4 z-[60] rounded-md bg-background px-4 py-2 text-sm font-medium text-foreground focus:not-sr-only focus:absolute"
@@ -61,7 +59,6 @@ export function SiteHeader() {
             <MobileNav />
           </div>
         </Container>
-      </header>
-    </>
+    </header>
   );
 }
