@@ -5,30 +5,31 @@ import { homeServiceLinks } from "@/content/site/coverage";
 
 export function HomeServicesLinks() {
   return (
-    <Section id="servicios-home" className="bg-background">
+    <Section id="servicios-home" className="home-services bg-background">
       <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-end lg:gap-16">
         <RevealOnScroll>
-          <p className="type-meta-caps text-accent">Oferta</p>
+          <p className="home-services-kicker">Oferta</p>
           <h2 className="type-display-section mt-3 text-accent">Servicios</h2>
           <p className="prose-editorial mt-5">
             Filtre el catálogo por tipo de operación o consulte asesoría directa.
           </p>
         </RevealOnScroll>
         <RevealOnScroll delayMs={100}>
-          <ul className="grid gap-0 sm:grid-cols-2">
-            {homeServiceLinks.map((item, index) => (
-              <li key={item.href + item.label}>
-                <Link
-                  href={item.href}
-                  className="service-filter-link focus-ring type-meta-caps group flex min-h-14 items-center border-t border-accent/30 text-accent transition-colors hover:text-accent-hover"
-                  style={{ animationDelay: `${index * 50}ms` }}
-                >
-                  <span className="transition-transform duration-500 ease-out group-hover:translate-x-1 motion-reduce:transform-none">
+          <ul className="grid gap-3 sm:grid-cols-2">
+            {homeServiceLinks.map((item, index) => {
+              const direct = item.href === "/contact";
+              return (
+                <li key={item.href + item.label} className={direct ? "sm:col-span-2" : undefined}>
+                  <Link
+                    href={item.href}
+                    className={`service-filter-link focus-ring${direct ? " service-filter-link--solid" : ""}`}
+                    style={{ animationDelay: `${index * 50}ms` }}
+                  >
                     {item.label}
-                  </span>
-                </Link>
-              </li>
-            ))}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         </RevealOnScroll>
       </div>
