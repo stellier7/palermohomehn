@@ -1,14 +1,28 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { siteConfig } from "@/content/site/config";
 
 export function MobileNav() {
   const [open, setOpen] = useState(false);
+  const rootRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const header = rootRef.current?.closest("header");
+    if (!header) {
+      return;
+    }
+    if (open) {
+      header.setAttribute("data-nav-open", "");
+    } else {
+      header.removeAttribute("data-nav-open");
+    }
+    return () => header.removeAttribute("data-nav-open");
+  }, [open]);
 
   return (
-    <div className="relative lg:hidden">
+    <div ref={rootRef} className="relative lg:hidden">
       <button
         type="button"
         className="focus-ring inline-flex min-h-10 items-center rounded-full border border-accent/40 bg-accent-soft px-3.5 py-1.5 text-xs font-medium uppercase tracking-[0.14em] text-accent shadow-[var(--shadow-soft)]"

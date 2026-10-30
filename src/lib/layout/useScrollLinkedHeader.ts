@@ -1,75 +1,119 @@
 "use client";
 
-import { useEffect, useRef, useState, type RefObject } from "react";
+import { useEffect, useRef, type RefObject } from "react";
+import { usePathname } from "next/navigation";
 
-type ScrollLinkedHeader = {
-  headerRef: RefObject<HTMLElement | null>;
-  translateY: number;
-  isFullyHidden: boolean;
-};
-
-export function useScrollLinkedHeader(): ScrollLinkedHeader {
+/**
+ * Hides the header with the scroll, then keeps it offscreen until the page
+ * moves back up. The transform is written in the scroll listener so the bar
+ * does not sit still for a frame and then jump.
+ */
+export function useScrollLinkedHeader(): RefObject<HTMLElement | null> {
   const headerRef = useRef<HTMLElement | null>(null);
-  const [translateY, setTranslateY] = useState(0);
-  const [isFullyHidden, setIsFullyHidden] = useState(false);
-  const offsetRef = useRef(0);
-  const lastScrollY = useRef(0);
-  const ticking = useRef(false);
+  const pathname = usePathname();
 
   useEffect(() => {
-    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-    if (reducedMotion.matches) {
+    const header = headerRef.current;
+    if (!header) {
       return;
     }
 
-    lastScrollY.current = window.scrollY;
+    const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
-    const applyOffset = (nextOffset: number) => {
-      const height = headerRef.current?.offsetHeight ?? 0;
-      const clamped =
-        height > 0
-          ? Math.min(0, Math.max(-height, nextOffset))
-          : Math.min(0, nextOffset);
+    let height = 0;
+    let offset = 0;
+    let lastY = window.scrollY;
+    let hidden = false;
 
-      offsetRef.current = clamped;
-      setTranslateY(clamped);
-      setIsFullyHidden(height > 0 && clamped <= -height + 1);
+    const paint = () => {
+      if (motion.matches) {
+        header.style.transform = "";
+        header.style.pointerEvents = "";
+        header.removeAttribute("inert");
+        hidden = false;
+        return;
+      }
+
+      header.style.transform = `translate3d(0, ${offset}px, 0)`;
+      const fullyHidden = height > 0 && offset <= -height + 0.5;
+      if (fullyHidden === hidden) {
+        return;
+      }
+      hidden = fullyHidden;
+      header.style.pointerEvents = fullyHidden ? "none" : "";
+      if (fullyHidden) {
+        header.setAttribute("inert", "");
+      } else {
+        header.removeAttribute("inert");
+      }
+    };
+
+    const measure = () => {
+      height = header.getBoundingClientRect().height;
+      if (height > 0) {
+        offset = Math.min(0, Math.max(-height, offset));
+      }
+      paint();
+    };
+
+    const placeForScroll = (scrollY: number) => {
+      lastY = scrollY;
+      offset = scrollY <= 0 || height <= 0 ? 0 : -Math.min(height, scrollY);
+      paint();
     };
 
     const onScroll = () => {
-      if (ticking.current) {
+      const scrollY = window.scrollY;
+      const delta = scrollY - lastY;
+      lastY = scrollY;
+
+      if (motion.matches || header.hasAttribute("data-nav-open")) {
+        offset = 0;
+        paint();
         return;
       }
-      ticking.current = true;
 
-      requestAnimationFrame(() => {
-        const currentY = window.scrollY;
-        const delta = currentY - lastScrollY.current;
-
-        if (currentY <= 0) {
-          applyOffset(0);
-        } else {
-          applyOffset(offsetRef.current - delta);
-        }
-
-        lastScrollY.current = currentY;
-        ticking.current = false;
-      });
+      if (scrollY <= 0) {
+        offset = 0;
+      } else if (height > 0) {
+        offset = Math.min(0, Math.max(-height, offset - delta));
+      } else {
+        offset = Math.min(0, offset - delta);
+      }
+      paint();
     };
 
-    const onResize = () => {
-      applyOffset(offsetRef.current);
+    const onMotionChange = () => {
+      if (motion.matches) {
+        offset = 0;
+      }
+      paint();
     };
+
+    const observer = new ResizeObserver(measure);
+    observer.observe(header);
+    const menuObserver = new MutationObserver(() => {
+      if (!header.hasAttribute("data-nav-open")) {
+        return;
+      }
+      offset = 0;
+      lastY = window.scrollY;
+      paint();
+    });
+    menuObserver.observe(header, { attributes: true, attributeFilter: ["data-nav-open"] });
+    measure();
+    placeForScroll(window.scrollY);
 
     window.addEventListener("scroll", onScroll, { passive: true });
-    window.addEventListener("resize", onResize);
-    applyOffset(offsetRef.current);
+    motion.addEventListener("change", onMotionChange);
 
     return () => {
+      observer.disconnect();
+      menuObserver.disconnect();
       window.removeEventListener("scroll", onScroll);
-      window.removeEventListener("resize", onResize);
+      motion.removeEventListener("change", onMotionChange);
     };
-  }, []);
+  }, [pathname]);
 
-  return { headerRef, translateY, isFullyHidden };
+  return headerRef;
 }
