@@ -36,6 +36,8 @@ function resolveOgImage(image?: string | OgImageInput): ResolvedOgImage[] {
     return [
       {
         url: absoluteAssetUrl(siteConfig.defaultOgImage),
+        width: 320,
+        height: 320,
         alt: siteConfig.name,
       },
     ];
@@ -69,14 +71,14 @@ export function buildSiteMetadata(overrides?: {
   const path = overrides?.path ?? "/";
   const images = resolveOgImage(overrides?.image);
   const imageUrls = images.map((entry) => entry.url);
+  const shareCard = overrides?.image ? "summary_large_image" : "summary";
 
   return {
     title,
     description,
     metadataBase: new URL(baseUrl),
     alternates: { canonical: absoluteUrl(path) },
-    // Icons come from app/favicon.ico, app/icon.png, and app/apple-icon.png
-    // (Next.js file conventions) so they always resolve on the deployment host.
+    // Favicon, icon, and apple icon are the Palermo logo via app/ file conventions.
     openGraph: {
       title,
       description,
@@ -87,7 +89,7 @@ export function buildSiteMetadata(overrides?: {
       images,
     },
     twitter: {
-      card: "summary_large_image",
+      card: shareCard,
       title,
       description,
       images: imageUrls,
