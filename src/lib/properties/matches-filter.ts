@@ -1,8 +1,50 @@
 import {
   cityMatchesCoverage,
   findCoverageCityBySlug,
+  normalizeCityKey,
 } from "@/content/site/coverage";
+import { formatPropertyType } from "./specs";
 import type { Property, PropertyFilter } from "./types";
+
+function propertySearchText(property: Property): string {
+  const listingAliases: string[] = [];
+  if (property.tags?.includes("alquiler")) {
+    listingAliases.push("alquiler", "renta");
+  }
+  if (property.tags?.includes("venta")) {
+    listingAliases.push("venta");
+  }
+
+  return normalizeCityKey(
+    [
+      property.id,
+      property.slug,
+      property.name,
+      property.title,
+      property.shortDescription,
+      property.location.label,
+      property.location.city,
+      property.location.region,
+      property.location.address,
+      property.tags?.join(" "),
+      property.features?.join(" "),
+      formatPropertyType(property.propertyType),
+      property.propertyType,
+      listingAliases.join(" "),
+    ]
+      .filter(Boolean)
+      .join(" "),
+  );
+}
+
+function queryMatchesProperty(property: Property, query: string): boolean {
+  const normalized = normalizeCityKey(query);
+  if (!normalized) {
+    return true;
+  }
+  const haystack = propertySearchText(property);
+  return normalized.split(/\s+/).every((token) => haystack.includes(token));
+}
 
 export function matchesPropertyFilter(
   property: Property,
@@ -37,28 +79,8 @@ export function matchesPropertyFilter(
       }
     }
   }
-  if (filters.query) {
-    const q = filters.query.toLowerCase().trim();
-    if (!q) {
-      return true;
-    }
-    const haystack = [
-      property.id,
-      property.slug,
-      property.name,
-      property.title,
-      property.shortDescription,
-      property.location.label,
-      property.location.city,
-      property.location.region,
-      property.tags?.join(" "),
-    ]
-      .filter(Boolean)
-      .join(" ")
-      .toLowerCase();
-    if (!haystack.includes(q)) {
-      return false;
-    }
+  if (filters.query && !queryMatchesProperty(property, filters.query)) {
+    return false;
   }
   return true;
 }

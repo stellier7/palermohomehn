@@ -156,7 +156,9 @@ export function mapAltairProperty(
     propertyType,
     status: "available",
     featured,
-    tags: [listingTag, raw.propertyType?.toLowerCase() ?? "inmueble"],
+    tags: [listingTag, raw.propertyType?.toLowerCase() ?? "inmueble", raw.code].filter(
+      (tag): tag is string => Boolean(tag?.trim()),
+    ),
     location: {
       label: locationLabel || "Honduras",
       country: raw.country,
